@@ -16,7 +16,9 @@ import { RouterLink, RouterView } from "vue-router";
 
 <style scoped>
 .container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 h1 {
   color: rgb(83, 123, 255);

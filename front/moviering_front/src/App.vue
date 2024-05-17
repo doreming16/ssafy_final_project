@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
   <header>
-    <div>
+    <div class="navbar">
       <nav>
         <RouterLink
           :to="{ path: '/' }"
@@ -20,12 +20,18 @@ import { RouterLink, RouterView } from "vue-router";
 </template>
 
 <style scoped>
-div {
+.container {
   color: white;
+}
+.navbar {
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 nav {
   padding: 20px;
   margin-bottom: 50px;
+  width: 50%;
   height: 50px;
   display: flex;
   justify-content: space-evenly;

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h3>UserInfoForm</h3>
     <form>
       <p>
         <label for="user_name">이름 </label>
@@ -21,6 +20,7 @@
         </div>
       </p>
       <p style="color: white;">기타 입력사항들 ~~</p>
+      <input type="" name="" id="">
     </form>
   </div>
 </template>

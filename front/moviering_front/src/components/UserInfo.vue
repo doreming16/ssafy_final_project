@@ -1,16 +1,19 @@
 <template>
-    <div>
-        <h1>UserInfo</h1>
-        <UserInfoForm />
-    </div>
+  <div class="user_info_container">
+    <h1>UserInfoForm</h1>
+    <UserInfoForm />
+  </div>
 </template>
 
 <script setup>
-import UserInfoForm from '@/components/UserInfoForm.vue';
+import UserInfoForm from "@/components/UserInfoForm.vue";
 </script>
 
 <style scoped>
-h1{
-    color: white;
+.user_info_container {
+  text-align: center;
+}
+h1 {
+  color: orangered;
 }
 </style>
