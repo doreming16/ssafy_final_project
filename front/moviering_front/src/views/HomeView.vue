@@ -1,24 +1,31 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
+  <div class="container">
     <div>
-        <h1>Home</h1>
-        <p style="color:white;">Move to :</p>
-        <RouterLink :to="{ name: 'accounts' }">Accounts</RouterLink>
-        <br>
-        <RouterLink :to="{ path: '/movies' }">Movies</RouterLink>
-        <RouterView />
+      <img src="../img/movie4.jpeg" alt="home_movie_image" />
     </div>
+    <RouterLink :to="{ name: 'accounts' }">Accounts</RouterLink>
+    <br />
+    <RouterLink :to="{ path: '/movies' }">Movies</RouterLink>
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
-h1{
-    color: rgb(83, 123, 255);
+.container {
+  text-align: center;
 }
-a{
-    color: white;
-    text-decoration: none;
+h1 {
+  color: rgb(83, 123, 255);
+}
+img {
+  width: 250px;
+}
+a {
+  color: white;
+  text-decoration: none;
 }
 </style>

@@ -1,17 +1,38 @@
 <template>
-    <div>
-        <h3>UserInfoForm</h3>
-        <form>
-            <input type="text">
-        </form>
-    </div>
+  <div>
+    <h3>UserInfoForm</h3>
+    <form>
+      <p>
+        <label for="user_name">이름 </label>
+        <input type="text" id="user_name" />
+      </p>
+      <p>
+        <label for="user_age">연령대 </label>
+        <input type="text" id="user_age" />
+      </p>
+      <p>
+        <span for="user_name">좋아하는 영화 장르 </span>
+        <div>
+            <button>SF/판타지</button>
+            <button>액션</button>
+            <button>드라마</button>
+            <button>로맨스</button>
+            <button>공포</button>
+        </div>
+      </p>
+      <p style="color: white;">기타 입력사항들 ~~</p>
+    </form>
+  </div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style scoped>
-h3{
-    color: green;
+h3 {
+  color: green;
+}
+label,
+span {
+  color: white;
 }
 </style>

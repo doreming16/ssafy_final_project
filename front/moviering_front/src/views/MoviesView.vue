@@ -1,17 +1,43 @@
 <template>
-    <div>
-        <h1>Movie</h1>
-        <div style="color: pink">
-            오늘의 영화
-        </div>
-    </div>
+  <div>
+    <p>오늘은 <span id="anniv_name">내 생일</span> 이네요!</p>
+    <RouterLink :to="{ name: movie_detail }">
+      <img src="../img/movie4.jpeg" alt="home_movie_image" />
+    </RouterLink>
+    <RouterLink :to="{ name: movie_detail }"> 디테일로 이동 </RouterLink>
+    <p>
+      이런 날, <span id="movie_name">조제, 호랑이 그리고 물고기들</span>은
+      어떠세요?
+    </p>
+    <RouterView />
+  </div>
 </template>
 
 <script setup>
+import { ref } from "vue";
+import { RouterLink, RouterView } from "vue-router";
+const isLogin = ref(false);
 </script>
 
 <style scoped>
-h1{
-    color: white;
+* {
+  text-align: center;
+}
+#anniv_name {
+  color: rgb(254, 168, 182);
+  font-size: 40px;
+  margin: 10px;
+}
+#movie_name {
+  color: rgb(254, 168, 182);
+  font-size: 40px;
+  margin: 10px;
+}
+p {
+  color: white;
+  font-size: 20px;
+}
+img {
+  width: 500px;
 }
 </style>
