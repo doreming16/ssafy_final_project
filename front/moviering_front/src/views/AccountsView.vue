@@ -29,7 +29,4 @@ const toUserInfo = function () {
 .accounts_container {
   text-align: center;
 }
-h1 {
-  color: white;
-}
 </style>

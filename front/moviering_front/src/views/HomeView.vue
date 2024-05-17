@@ -7,7 +7,7 @@ import { RouterLink, RouterView } from "vue-router";
     <div>
       <img src="../img/movie4.jpeg" alt="home_movie_image" />
     </div>
-    <RouterLink :to="{ name: 'accounts' }">Accounts</RouterLink>
+    <RouterLink :to="{ path: '/accounts' }">Accounts</RouterLink>
     <br />
     <RouterLink :to="{ path: '/movies' }">Movies</RouterLink>
     <RouterView />

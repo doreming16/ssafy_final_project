@@ -19,7 +19,7 @@
             <button>공포</button>
         </div>
       </p>
-      <p style="color: white;">기타 입력사항들 ~~</p>
+      <p>기타 입력사항들 ~~</p>
       <input type="" name="" id="">
     </form>
   </div>
@@ -30,9 +30,5 @@
 <style scoped>
 h3 {
   color: green;
-}
-label,
-span {
-  color: white;
 }
 </style>

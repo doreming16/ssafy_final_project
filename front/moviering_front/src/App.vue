@@ -20,11 +20,7 @@ import { RouterLink, RouterView } from "vue-router";
 </template>
 
 <style scoped>
-.container {
-  color: white;
-}
 .navbar {
-  color: white;
   display: flex;
   justify-content: center;
 }

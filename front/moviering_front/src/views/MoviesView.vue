@@ -33,7 +33,6 @@ const isLogin = ref(false);
   margin: 10px;
 }
 p {
-  color: white;
   font-size: 20px;
 }
 img {

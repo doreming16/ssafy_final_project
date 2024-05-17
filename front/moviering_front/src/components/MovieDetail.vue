@@ -1,4 +1,7 @@
 <template>
+  <div>
+    <RouterLink :to="{ path: '/movies' }">뒤로가기</RouterLink>
+  </div>
   <div class="container">
     <div class="row1">
       <div class="box_left">
@@ -52,6 +55,7 @@
 
 <script setup>
 import { ref } from "vue";
+import { RouterLink, RouterView } from "vue-router";
 const count_stars = ref(4);
 </script>
 
