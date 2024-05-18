@@ -6,7 +6,7 @@ class User(AbstractUser):
     pass
 
 class UserInfo(models.Model):
-    user_id = models.ForeignKey()
+    user_id = models.ForeignKey(User, models.CASCADE)
     sex = models.BooleanField()
     age = models.TextField()
     favorite_genre = models.IntegerField()

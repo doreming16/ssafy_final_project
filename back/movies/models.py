@@ -9,8 +9,9 @@ class Movie(models.Model):
     release_date = models.DateField()
     vote_average = models.FloatField()
     adult = models.BooleanField()
-    backdrop_path = models.TextField()
-    poster_path = models.TextField()
+    # 데이터에 없는 값이 있어서 이 값은 null로 처리해줌
+    backdrop_path = models.TextField(null=True)
+    poster_path = models.TextField(null=True)
 
 class Genre(models.Model):
     name = models.CharField(max_length=6)
