@@ -1,7 +1,8 @@
 from django.db import models
+from accounts.models import User
 
 # Create your models here.
-class Movie:
+class Movie(models.Model):
     title = models.TextField()
     original_title = models.TextField()
     overview = models.TextField()
@@ -11,5 +12,11 @@ class Movie:
     backdrop_path = models.TextField()
     poster_path = models.TextField()
 
-class Genre:
+class Genre(models.Model):
     name = models.CharField(max_length=6)
+
+class Review(models.Model):
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    movie_id = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    rating = models.FloatField()
+    content = models.TextField()

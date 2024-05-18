@@ -4,3 +4,11 @@ from django.contrib.auth.models import AbstractUser
 # Create your models here.
 class User(AbstractUser):
     pass
+
+class UserInfo(models.Model):
+    user_id = models.ForeignKey()
+    sex = models.BooleanField()
+    age = models.TextField()
+    favorite_genre = models.IntegerField()
+    viewing_environment = models.TextField()
+    birthday = models.DateField()
