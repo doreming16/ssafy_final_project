@@ -14,6 +14,6 @@ import UserInfoForm from "@/components/UserInfoForm.vue";
   text-align: center;
 }
 h1 {
-  color: orangered;
+  color: gray;
 }
 </style>
