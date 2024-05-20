@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form style="padding: 50px;">
+    <form v-on:submit="submitForm" style="padding: 50px;">
         <!-- 성별 / 연령대 / 선호하는 영화 장르 / 관람시 중요한 요소 / 생일 -->
 
       <div>
@@ -111,6 +111,7 @@
             <input type="radio" v-model="viewing_environment" id="etc" value="etc"/>
             <label for="etc">
               기타
+              <!-- '고려하지 않음' ? -->
             </label>
           </p>
         </div>
@@ -140,6 +141,8 @@ const era = ref('')
 const favorite_genre = ref([])
 const viewing_environment = ref(null)
 const birthday = ref(null)
+
+
 
 </script>
 

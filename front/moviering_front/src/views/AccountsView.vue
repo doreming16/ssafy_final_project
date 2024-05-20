@@ -1,15 +1,17 @@
 <template>
   <div class="accounts_container">
-    <h1>Accounts</h1>
-    <RouterLink :to="{ path: '/accounts/login' }">
-      <button>로그인</button>
-    </RouterLink>
-    <RouterLink :to="{ path: '/accounts/signup' }">
-      <button>회원가입</button>
-    </RouterLink>
+    <!-- <h1>Accounts</h1> -->
     <!-- <RouterLink :to="{ path: '/accounts/userinfo' }"> -->
-    <button @click="toUserInfo">UserInfo</button>
+    <button class="userinfo_button" @click="toUserInfo">나의 영화 취향 입력하기</button>
     <!-- </RouterLink> -->
+    <div>
+      <RouterLink :to="{ path: '/accounts/login' }">
+        <button class="accounts_button">로그인</button>
+      </RouterLink>
+      <RouterLink :to="{ path: '/accounts/signup' }">
+        <button class="accounts_button">회원가입</button>
+      </RouterLink>
+    </div>
     <RouterView />
   </div>
 </template>
@@ -28,5 +30,25 @@ const toUserInfo = function () {
 <style scoped>
 .accounts_container {
   text-align: center;
+}
+.accounts_button{
+  font-family: SUITE;
+  font-size: 15px;
+  color: white;
+  /* border: none; */
+  border: 1px solid pink;
+  background-color: transparent;
+  margin: 15px;
+  cursor: pointer;
+}
+.userinfo_button{
+  font-family: SUITE;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-bottom: 2px solid pink;
+  background-color: transparent;
+  margin: 50px;
+  cursor: pointer;
 }
 </style>
