@@ -6,6 +6,7 @@ import UserInfo from "@/components/UserInfo.vue";
 import MovieDetail from "@/components/MovieDetail.vue";
 import SignUpView from "@/views/SignUpView.vue";
 import LoginView from "@/views/LoginView.vue";
+import { useCounterStore } from '@/stores/counter'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,5 +48,13 @@ const router = createRouter({
     },
   ],
 });
+
+router.beforeEach((to, from) => {
+  const store = useCounterStore()
+  if (to.name === 'userinfo' && !store.isLogin) {
+    window.alert('로그인이 필요합니다.')
+    return { name : 'LoginView' }
+  }
+})
 
 export default router;

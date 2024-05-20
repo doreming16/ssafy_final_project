@@ -56,7 +56,15 @@ export const useCounterStore = defineStore(
           console.log(err);
         });
     };
-    return { API_URL, signUp, logIn, token };
+
+    const isLogin = computed(() => {
+      if (token.value === null){
+        return false
+      } else {
+        return true
+      }
+    })
+    return { API_URL, signUp, logIn, token, isLogin };
   },
   { persist: true }
 );
