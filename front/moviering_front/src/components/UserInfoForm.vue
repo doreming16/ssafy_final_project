@@ -8,7 +8,7 @@
         <div class="form_content">
           <input type="radio" name="gender" value="male" id="gendeR_male" v-model="gender"/>
           <label for="gender_male">
-              남성
+            남성
             </label>
           <input type="radio" name="gender" value="female" id="gender_female" v-model="gender"/>
       
@@ -21,52 +21,52 @@
 
 
       <div>
-        <label for="age" class="form_label">선호하는 영화 개봉 시기</label>
+        <label class="form_label">선호하는 영화 개봉 시기</label>
         <div class="form_content" style="display: flex; flex-direction:column;">
           <p>
-            <input type="radio" name="age" id="bf1970" value="bf1970" v-model="age"/>
+            <input type="radio" name="era" id="bf1970" value="bf1970" v-model="era"/>
             <label for="bf1970">
               1970년대 이전
             </label>
           </p>
           <p>
-            <input type="radio" name="age" id="1970s" value="1970s" v-model="age"/>
+            <input type="radio" name="era" id="1970s" value="1970s" v-model="era"/>
             <label for="1970s">
               1970년대
             </label>
           </p>
           <p>
-            <input type="radio" name="age" id="1980s" value="1980s" v-model="age"/>
+            <input type="radio" name="era" id="1980s" value="1980s" v-model="era"/>
             <label for="1980s">
               1980년대
             </label>
           </p>
           <p>
-            <input type="radio" name="age" id="1990s" value="1990s" v-model="age"/>
+            <input type="radio" name="era" id="1990s" value="1990s" v-model="era"/>
             <label for="1990s">
               1990년대
             </label>
           </p>
           <p>
-            <input type="radio" name="age" id="2000s" value="2000s" v-model="age"/>
+            <input type="radio" name="era" id="2000s" value="2000s" v-model="era"/>
             <label for="2000s">
               2000년대
             </label>
           </p>
           <p>
-            <input type="radio" name="age" id="2010s" value="2010s" v-model="age"/>
+            <input type="radio" name="era" id="2010s" value="2010s" v-model="era"/>
             <label for="2010s">
               2010년대
             </label>
           </p>
           <p>
-            <input type="radio" name="age" id="af2020" value="af2020" v-model="age"/>
+            <input type="radio" name="era" id="af2020" value="af2020" v-model="era"/>
             <label for="af2020">
               2020년 이후
             </label>
           </p>
         </div>
-        <p style="color:green;">{{ age }}</p>
+        <p style="color:green;">{{ era }}</p>
       </div>
 
 
@@ -75,7 +75,8 @@
         <div style="display:flex; justify-content: center;">
           <div class="form_content form_genre_list">
             <div v-for="genre in data" style="margin: 10px;">
-              <input type="checkbox" :value="genre.fields.name" :id="genre.fields.name" v-model="favorite_genre">
+              <!-- 데이터 pk로 받자 -->
+              <input type="checkbox" :value="genre.pk" :id="genre.fields.name" v-model="favorite_genre">
               <label :for="genre.fields.name">{{ genre.fields.name }}</label>
             </div>
           </div>
@@ -120,10 +121,12 @@
       <div>
         <label for="birthday_input" class="form_label">생일</label>
           <div>
-            <input type="date" value="1997-05-10" name="birthday_input" id="birthday_input">
+            <input type="date" v-model="birthday" value="1997-05-10" name="birthday_input" id="birthday_input">
           </div>
+          <p style="color:green;">{{ birthday }}</p>
     </div>
       <input type="submit" value="정보 등록" id="submit_info_button">
+
     </form>
   </div>
 </template>
@@ -133,7 +136,7 @@ import { ref } from 'vue';
 import data from '@/fixtures/genres.json'
 
 const gender = ref('')
-const age = ref('')
+const era = ref('')
 const favorite_genre = ref([])
 const viewing_environment = ref(null)
 const birthday = ref(null)

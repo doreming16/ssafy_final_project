@@ -2,7 +2,7 @@
   <div>
     <p>오늘은 <span id="anniv_name">내 생일</span> 이네요!</p>
     <RouterLink :to="{ path: '/movies/detail' }">
-      <img src="../img/movie4.jpeg" alt="home_movie_image" />
+      <img src="../img/movie4.jpeg" alt="home_movie_image" id="recommend_poster_main"/>
     </RouterLink>
     <p>
       이런 날, <span id="movie_name">조제, 호랑이 그리고 물고기들</span>은
@@ -24,13 +24,16 @@ const isLogin = ref(false);
 }
 #anniv_name {
   color: rgb(254, 168, 182);
-  font-size: 40px;
+  font-size: 30px;
   margin: 10px;
 }
 #movie_name {
   color: rgb(254, 168, 182);
-  font-size: 40px;
+  font-size: 30px;
   margin: 10px;
+}
+#recommend_poster_main{
+  width: 300px;
 }
 p {
   font-size: 20px;
