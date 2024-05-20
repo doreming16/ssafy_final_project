@@ -1,20 +1,20 @@
 <template>
-  <div>
+  <div class="signup_container">
     <h1>Sign Up Page</h1>
     <form @submit.prevent="signUp">
       <label for="username">username : </label>
       <input type="text" id="username" v-model.trim="username" />
       <br />
 
-      <label for="password">password : </label>
-      <input type="password" id="password" v-model.trim="password" />
+      <label for="password1">password : </label>
+      <input type="password" id="password1" v-model.trim="password1" />
       <br />
 
-      <label for="passwordcheck">password-Check : </label>
+      <label for="password2">password-Check : </label>
       <input
-        type="passwordcheck"
-        id="passwordcheck"
-        v-model.trim="passwordcheck"
+        type="password"
+        id="password2"
+        v-model.trim="password2"
       />
       <br />
       <input type="submit" value="SignUp" />
@@ -27,19 +27,23 @@ import { ref } from "vue";
 import { useCounterStore } from "@/stores/counter";
 
 const username = ref(null);
-const password = ref(null);
-const passwordcheck = ref(null);
+const password1 = ref(null);
+const password2 = ref(null);
 
 const store = useCounterStore();
 
 const signUp = function () {
   const payload = {
     username: username.value,
-    password: password.value,
-    passwordcheck: passwordcheck.value,
+    password1: password1.value,
+    password2: password2.value,
   };
   store.signUp(payload);
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.signup_container{
+  text-align: center;
+}
+</style>

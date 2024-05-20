@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="login_container">
     <h1>Login Page</h1>
     <form @submit.prevent="logIn">
       <label for="username">username : </label>
@@ -33,4 +33,8 @@ const logIn = function () {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.login_container{
+  text-align: center;
+}
+</style>

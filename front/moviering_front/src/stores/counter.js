@@ -12,16 +12,19 @@ export const useCounterStore = defineStore(
 
     const signUp = function (payload) {
       const username = payload.username;
-      const password = payload.password;
-      const passwordcheck = payload.passwordcheck;
+      const password1 = payload.password1;
+      const password2 = payload.password2;
+
+      // const { username, password, passwordcheck } = payload
+
 
       axios({
         method: "post",
         url: `${API_URL}/accounts/signup/`,
         data: {
           username,
-          password,
-          passwordcheck,
+          password1,
+          password2
         },
       })
         .then((res) => {
@@ -53,7 +56,7 @@ export const useCounterStore = defineStore(
           console.log(err);
         });
     };
-    return { signUp, logIn, token };
+    return { API_URL, signUp, logIn, token };
   },
   { persist: true }
 );
