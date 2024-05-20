@@ -8,9 +8,8 @@ import { RouterLink, RouterView } from "vue-router";
       <nav>
         <RouterLink
           :to="{ path: '/' }"
-          style="color: white; text-decoration: none; font-size: 30px"
-        >
-          MovieRing
+          style="color: white; text-decoration: none; font-size: 30px">
+          <span>MovieRing</span>
         </RouterLink>
       </nav>
     </div>

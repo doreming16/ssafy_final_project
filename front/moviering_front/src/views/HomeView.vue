@@ -6,15 +6,16 @@ import data from '@/fixtures/movies.json'
 <template>
   <div class="container">
     <div class="main_row1">
-      Main
+      Today's Movie
       <img src="../img/movie4.jpeg" alt="home_movie_image" />
     </div>
+    <span style="margin: 30px 0px;">---</span>
     <RouterLink :to="{ path: '/accounts' }">Accounts</RouterLink>
-    ---
+    <span style="margin: 30px 0px;">---</span>
     <br />
     <RouterLink :to="{ path: '/movies' }">Movies</RouterLink>
     <RouterView />
-    ---
+    <span style="margin: 30px 0px;">---</span>
     <div class="movie_list_all" >
       <div v-for="movie in data">
         <!-- {{ movie.fields.poster_path }} -->
