@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .views import ImagePathView
 
 urlpatterns = [
     path('', views.index),
@@ -9,4 +10,5 @@ urlpatterns = [
     path('<int:pk>/rate/', views.rate),
     path('<int:pk>/rate/edit', views.rate),
     path('<int:pk>/rate/delete', views.rate),
+    path('api/image-paths/', ImagePathView.as_view(), name='image-paths'),
 ]

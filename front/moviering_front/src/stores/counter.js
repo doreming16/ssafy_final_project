@@ -6,7 +6,15 @@ import { useRouter } from 'vue-router'
 export const useCounterStore = defineStore(
   "counter",
   () => {
+    const images = ref([])
     const API_URL = "http://127.0.0.1:8000";
+
+    const getImages = function () {
+      axios({
+        method: 'get',
+        url: `${API_URL}/movies/home`
+      })
+    }
 
     // token 저장
     const token = ref(null);

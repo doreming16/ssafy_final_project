@@ -20,6 +20,14 @@ import { RouterLink, RouterView } from "vue-router";
 </template>
 
 <style scoped>
+@font-face {
+	font-family: 'SUITE';
+	font-weight: 500;
+	src: url('./src/assets/fonts/SUITE-Medium.woff2') format('woff2');
+}
+* {
+  font-family: 'SUITE';
+}
 .navbar {
   display: flex;
   justify-content: center;
