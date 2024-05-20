@@ -3,6 +3,8 @@ from accounts.models import User
 
 # Create your models here.
 class Movie(models.Model):
+    # 장르 id 어떻게 불러오냐
+    # genre_ids = models.TextField()
     title = models.TextField()
     original_title = models.TextField()
     overview = models.TextField()
@@ -21,3 +23,11 @@ class Review(models.Model):
     movie_id = models.ForeignKey(Movie, on_delete=models.CASCADE)
     rating = models.FloatField()
     content = models.TextField()
+
+class MovieGenreInfo(models.Model):
+    movie_id = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='movie_genre_id')
+    genre_id1 = models.IntegerField(null=True)
+    genre_id2 = models.IntegerField(null=True)
+    genre_id3 = models.IntegerField(null=True)
+    genre_id4 = models.IntegerField(null=True)
+    genre_id5 = models.IntegerField(null=True)
