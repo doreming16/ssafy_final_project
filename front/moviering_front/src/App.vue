@@ -23,7 +23,17 @@ import { RouterLink, RouterView } from "vue-router";
 @font-face {
 	font-family: 'SUITE';
 	font-weight: 500;
-	src: url('./src/assets/fonts/SUITE-Medium.woff2') format('woff2');
+	src: url('@/assets/fonts/SUITE-Medium.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'SUITE';
+	font-weight: 300;
+	src: url('@/assets/fonts/SUITE-Light.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'SUITE';
+	font-weight: 800;
+	src: url('@/assets/fonts/SUITE-ExtraBold.woff2') format('woff2');
 }
 * {
   font-family: 'SUITE';

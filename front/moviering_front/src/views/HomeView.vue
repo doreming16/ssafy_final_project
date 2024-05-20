@@ -1,11 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import data from '@/fixtures/movies.json'
-
-const getImageUrl = (path) => {
-  return `https://image.tmdb.org/t/p/w300/${path}`;
-};
-
 </script>
 
 <template>
@@ -23,7 +18,7 @@ const getImageUrl = (path) => {
     <div class="movie_list_all" >
       <div v-for="movie in data">
         <!-- {{ movie.fields.poster_path }} -->
-        <img class="poster_main" :src="`https://image.tmdb.org/t/p/w300/${movie.fields.poster_path}`" alt="Image">
+        <img v-if="movie.fields.vote_average > 7.5" class="poster_main" :src="`https://image.tmdb.org/t/p/w300/${movie.fields.poster_path}`" alt="Image">
       </div>
     </div>
   </div>

@@ -2,51 +2,82 @@
   <div>
     <form>
         <!-- 성별 / 연령대 / 선호하는 영화 장르 / 관람시 중요한 요소 / 생일 -->
-      <p>
+
+      <div>
         <label for="gender" class="form_label">성별</label>
-        <input type="radio" name="gender" value="male" id="user_gender" />남성
-        <input type="radio" name="gender" value="female" id="user_gender" />여성
-      </p>
-      <p>
-        <!-- 연령대 .. 이 서비스를 12-19세도 많이 이용할까? -->
-        <label for="age" class="form_label">연령대</label>
-        <input type="radio" name="age" id="age" value="under_twelve"/>12세 이하
-        <input type="radio" name="age" id="age" value="twelve"/>12세
-        <input type="radio" name="age" id="age" value="fifteen"/>15세
-        <input type="radio" name="age" id="age" value="over_nineteen"/>19세 이상
-      </p>
-      <p>
-        <span for="user_name" class="form_label">선호하는 영화 장르 </span>
-        <div>
-          <!-- 장르 json에 맞춰서 직접 넣을까 ? -->
-          <!-- json file for 돌리면서 할 수 있는 방법 없나? -->
-            <input type="button" value="SF/판타지" name="favorite_genre" class="fav_genre_button" />
-            <input type="button" value="로맨스" name="favorite_genre" class="fav_genre_button" />
-            <input type="button" value="스릴러" name="favorite_genre" class="fav_genre_button" />
-            <input type="button" value="드라마/가족" name="favorite_genre" class="fav_genre_button" />
-            <input type="button" value="등등" name="favorite_genre" class="fav_genre_button" />
+        <div class="form_content">
+          <input type="radio" name="gender" value="male" id="user_gender" v-model="gender"/>남성
+          <input type="radio" name="gender" value="female" id="user_gender" v-model="gender"/>여성
         </div>
-      </p>
-      <p>
+        <p style="color:green;">{{ gender }}</p>
+      </div>
+
+
+      <div>
+        <label for="age" class="form_label">선호하는 영화 개봉 시기</label>
+        <div class="form_content">
+          <input type="radio" name="age" id="age" value="under_twelve" v-model="age"/>1970년대 이전
+          <input type="radio" name="age" id="age" value="twelve" v-model="age"/>1970년대
+          <input type="radio" name="age" id="age" value="fifteen" v-model="age"/>1980년대
+          <input type="radio" name="age" id="age" value="over_nineteen" v-model="age"/>1990년대
+          <input type="radio" name="age" id="age" value="over_nineteen" v-model="age"/>2000년대
+          <input type="radio" name="age" id="age" value="over_nineteen" v-model="age"/>2010년대
+          <input type="radio" name="age" id="age" value="over_nineteen" v-model="age"/>2020년 이후
+        </div>
+        <p style="color:green;">{{ age }}</p>
+      </div>
+
+
+      <div>
+        <label class="form_label">선호하는 영화 장르</label>
+        <div style="display:flex; justify-content: center;">
+          <div class="form_content form_genre_list">
+            <div v-for="genre in data" style="margin: 10px;">
+              <input type="checkbox" :value="genre.fields.name" v-model="favorite_genre">
+              <span>{{ genre.fields.name }}</span>
+            </div>
+          </div>
+        </div>
+        <p style="color:green;">{{ favorite_genre }}</p>
+      </div>
+
+
+      <div>
         <!-- 연령대 .. 이 서비스를 12-19세도 많이 이용할까? -->
         <span for="viewing_environment" class="form_label">영화 관람 시 나에게 중요한 요소</span>
-        <div>
-          <input type="radio" name="viewing_environment" id="viewing_environment" value="accessibility"/>접근성
-          <input type="radio" name="viewing_environment" id="viewing_environment" value="sound"/>음향
-          <input type="radio" name="viewing_environment" id="viewing_environment" value="screen_width"/>화면 크기
-          <input type="radio" name="viewing_environment" id="viewing_environment" value="etc"/>기타
+        <div class="form_content">
+          <input type="radio" v-model="viewing_environment" id="viewing_environment" value="accessibility"/>접근성
+          <input type="radio" v-model="viewing_environment" id="viewing_environment" value="sound"/>음향
+          <input type="radio" v-model="viewing_environment" id="viewing_environment" value="screen_width"/>화면 크기
+          <input type="radio" v-model="viewing_environment" id="viewing_environment" value="etc"/>기타
         </div>
-      </p>
-      <p>
-        <label for="birthday" class="form_label">생일</label>
-        <input type="" name="birthday" id="birthday">
-      </p>
+        <p style="color:green;">{{ viewing_environment }}</p>
+      </div>
+
+
+      <div>
+        <label for="birthday" class="form_label">생일
+          <div>
+            <input type="date" value="1997-05-10" name="birthday" id="birthday">
+          </div>
+      </label>
+    </div>
       <input type="submit" value="정보 등록" id="submit_info_button">
     </form>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+import data from '@/fixtures/genres.json'
+
+const gender = ref('')
+const age = ref('')
+const favorite_genre = ref([])
+const viewing_environment = ref(null)
+const birthday = ref(null)
+
+</script>
 
 <style scoped>
 h3 {
@@ -54,14 +85,30 @@ h3 {
 }
 .form_label{
   color: pink;
-  margin-right: 10px;
+  margin: 10px;
+  font-weight: bold;
+}
+.form_content{
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
 }
 .fav_genre_button{
+  font-family: SUITE;
   border-radius: 20px;
-padding: 4px 10px;
-margin: 5px;
+  border: none;
+  padding: 4px 10px;
+  margin: 5px;
+}
+.form_genre_list{
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
 }
 #submit_info_button{
+  font-family: SUITE;
   padding: 5px 10px;
 }
 </style>
