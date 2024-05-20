@@ -41,7 +41,7 @@ const router = createRouter({
       name: "movies",
       component: Movies,
     },
-    {
+    { 
       path: "/movies/detail",
       name: "movie_detail",
       component: MovieDetail,
@@ -55,6 +55,10 @@ router.beforeEach((to, from) => {
     window.alert('로그인이 필요합니다.')
     return { name : 'LoginView' }
   }
-})
+  if ((to.name === 'SignUpView' || to.name==="LoginView") && (store.isLogin)) {
+    window.alert('이미 로그인이 되어있습니다.')
+    return { name: 'home'}
+  }
+ {}})
 
 export default router;
