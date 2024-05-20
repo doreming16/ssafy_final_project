@@ -3,14 +3,14 @@
     <h1>Login Page</h1>
     <form @submit.prevent="logIn">
       <label for="username">username : </label>
-      <input type="text" id="username" v-model.trim="username" />
+      <input type="text" class="login_button" id="username" v-model.trim="username" />
       <br />
 
       <label for="password">password : </label>
-      <input type="password" id="password" v-model.trim="password" />
+      <input type="password" class="login_button" id="password" v-model.trim="password" />
       <br />
 
-      <input type="submit" value="LogIn" />
+      <input type="submit" class="login_submit_button" value="LogIn" />
     </form>
   </div>
 </template>
@@ -36,5 +36,25 @@ const logIn = function () {
 <style scoped>
 .login_container{
   text-align: center;
+}
+.login_button{
+  font-family: SUITE;
+  font-size: 15px;
+  color: white;
+  padding: 5px 8px;
+  border: 1px solid pink;
+  background-color: transparent;
+  margin: 15px;
+  cursor: pointer;
+}
+.login_submit_button{
+  font-family: SUITE;
+  font-size: 20px;
+  color: white;
+  padding: 6px 10px;
+  border: 3px solid pink;
+  background-color: transparent;
+  margin: 50px;
+  cursor: pointer;
 }
 </style>

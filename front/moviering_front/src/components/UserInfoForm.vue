@@ -11,7 +11,6 @@
             남성
             </label>
           <input type="radio" name="gender" value="female" id="gender_female" v-model="gender"/>
-      
           <label for="gender_female">
             여성
             </label>
@@ -19,7 +18,10 @@
         <p style="color:green;">{{ gender }}</p>
       </div>
 
-
+      <div class="form_divide" style="margin: 30px 0px;">
+        -------------------------------------------------------------------------------
+      </div>
+      
       <div>
         <label class="form_label">선호하는 영화 개봉 시기</label>
         <div class="form_content" style="display: flex; flex-direction:column;">
@@ -69,6 +71,9 @@
         <p style="color:green;">{{ era }}</p>
       </div>
 
+      <div class="form_divide" style="margin: 30px 0px;">
+        -------------------------------------------------------------------------------
+      </div>
 
       <div>
         <label class="form_label">선호하는 영화 장르</label>
@@ -84,6 +89,9 @@
         <p style="color:green;">{{ favorite_genre }}</p>
       </div>
 
+      <div class="form_divide" style="margin: 30px 0px;">
+        -------------------------------------------------------------------------------
+      </div>
 
       <div>
         <!-- 연령대 .. 이 서비스를 12-19세도 많이 이용할까? -->
@@ -118,7 +126,10 @@
         <p style="color:green;">{{ viewing_environment }}</p>
       </div>
 
-
+      <div class="form_divide" style="margin: 30px 0px;">
+        -------------------------------------------------------------------------------
+      </div>
+      
       <div>
         <label for="birthday_input" class="form_label">생일</label>
           <div>
@@ -152,6 +163,7 @@ h3 {
 }
 .form_label{
   color: pink;
+  font-size: 20px;
   margin: 10px;
   font-weight: bold;
 }
@@ -180,5 +192,19 @@ h3 {
 }
 #birthday_input{
   margin: 20px;
+}
+.form_divide{
+  margin: 30px;
+}
+
+#submit_info_button{
+  font-family: SUITE;
+  font-size: 13px;
+  padding: 6px 10px;
+  color: white;
+  border: 3px solid pink;
+  background-color: transparent;
+  margin: 50px;
+  cursor: pointer;
 }
 </style>

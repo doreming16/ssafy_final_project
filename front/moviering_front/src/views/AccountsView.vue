@@ -36,6 +36,8 @@ const toUserInfo = function () {
   font-size: 15px;
   color: white;
   /* border: none; */
+  /* border-radius: 5px; */
+  padding: 5px 8px;
   border: 1px solid pink;
   background-color: transparent;
   margin: 15px;
