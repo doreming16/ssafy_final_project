@@ -9,6 +9,6 @@ class UserInfo(models.Model):
     user_id = models.ForeignKey(User, models.CASCADE)
     gender = models.TextField()
     era = models.TextField()
-    favorite_genre = models.IntegerField()
+    favorite_genre = models.JSONField()
     viewing_environment = models.TextField()
     birthday = models.DateField()
