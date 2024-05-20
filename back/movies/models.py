@@ -4,7 +4,7 @@ from accounts.models import User
 # Create your models here.
 class Movie(models.Model):
     # 장르 id 어떻게 불러오냐
-    # genre_ids = models.TextField()
+    genre_ids = models.JSONField(default=list, blank=True, null=True)
     title = models.TextField()
     original_title = models.TextField()
     overview = models.TextField()
