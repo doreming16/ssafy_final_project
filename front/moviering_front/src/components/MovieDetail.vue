@@ -19,11 +19,19 @@
 
     <div class="row2">
       <p id="question">이 영화, 어떠셨나요?</p>
-      <div class="count_stars">
+      <div>
+        <input type="radio">
+        <img v-for="star in 4" value='4' class="star" src="../icons/star1.png" alt="icon_star" />
+      </div> 
+      <div>
+        <input type="radio">
+        <img v-for="star in 5" value='5'  class="star" src="../icons/star1.png" alt="icon_star" />
+      </div>
+      <!-- <div class="count_stars">
         <div v-for="count in count_stars">
           <img class="star" src="../icons/star1.png" alt="icon_star" />
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="row3">
@@ -56,7 +64,7 @@
 <script setup>
 import { ref } from "vue";
 import { RouterLink, RouterView } from "vue-router";
-const count_stars = ref(4);
+const count_stars = ref(null);
 </script>
 
 <style scoped>
