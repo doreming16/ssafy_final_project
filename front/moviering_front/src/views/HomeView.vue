@@ -5,6 +5,8 @@ import data from '@/fixtures/movies2.json'
 
 <template>
   <div class="container">
+    <RouterLink :to="{ path: '/test' }" style="font-size: 50px;">test</RouterLink>
+
     <div class="main_row1">
       <p class="main_subtitle">Today's Movie</p>
       <img src="../img/movie4.jpeg" alt="home_movie_image" />

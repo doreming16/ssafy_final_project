@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-on:submit="submitForm" style="padding: 50px;">
+    <form @submit.prevent="submitForm" style="padding: 50px;">
         <!-- 성별 / 연령대 / 선호하는 영화 장르 / 관람시 중요한 요소 / 생일 -->
 
       <div>
@@ -145,7 +145,8 @@
 
 <script setup>
 import { ref } from 'vue';
-import data from '@/fixtures/genres.json'
+import data from '@/fixtures/genres.json';
+import axios from 'axios';
 
 const gender = ref('')
 const era = ref('')
@@ -153,7 +154,28 @@ const favorite_genre = ref([])
 const viewing_environment = ref(null)
 const birthday = ref(null)
 
+const formData  = ref({
+  gender: '',
+  era: '',
+  favorite_gerne: [],
+  viewing_environment: '',
+  birthday: null
+});
 
+const submitForm = () => {
+  axios({
+    method: 'post',
+    url: '/api/submit-form/',
+    data: formData.value,
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then(res => {
+    console.log(res.data)
+  }).catch(err => {
+    console.log(err)
+  })
+};
 
 </script>
 

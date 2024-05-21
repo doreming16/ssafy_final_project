@@ -8,6 +8,8 @@ import SignUpView from "@/views/SignUpView.vue";
 import LoginView from "@/views/LoginView.vue";
 import { useCounterStore } from '@/stores/counter'
 
+import Test from '@/components/Test.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -46,15 +48,20 @@ const router = createRouter({
       name: "movie_detail",
       component: MovieDetail,
     },
+    {
+      path: '/test',
+      name: 'test',
+      component: Test,
+    }
   ],
 });
 
 router.beforeEach((to, from) => {
   const store = useCounterStore()
-  if (to.name === 'userinfo' && !store.isLogin) {
-    window.alert('로그인이 필요합니다.')
-    return { name : 'LoginView' }
-  }
+  // if (to.name === 'userinfo' && !store.isLogin) {
+  //   window.alert('로그인이 필요합니다.')
+  //   return { name : 'LoginView' }
+  // }
   if ((to.name === 'SignUpView' || to.name==="LoginView") && (store.isLogin)) {
     window.alert('이미 로그인이 되어있습니다.')
     return { name: 'home'}
