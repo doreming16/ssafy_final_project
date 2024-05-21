@@ -1,5 +1,6 @@
 <template>
   <div class="login_container">
+    <p>back to <RouterLink :to="{ path: '/accounts' }">accounts</RouterLink></p>
     <h1>Login Page</h1>
     <form @submit.prevent="logIn">
       <label for="username">username : </label>
@@ -18,6 +19,7 @@
 <script setup>
 import { ref } from "vue";
 import { useCounterStore } from "@/stores/counter";
+import { RouterLink, RouterView } from 'vue-router';
 
 const username = ref(null);
 const password = ref(null);
@@ -34,6 +36,9 @@ const logIn = function () {
 </script>
 
 <style scoped>
+a{
+  color: white;
+}
 .login_container{
   text-align: center;
 }

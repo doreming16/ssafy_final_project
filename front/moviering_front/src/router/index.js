@@ -57,10 +57,10 @@ const router = createRouter({
 
 router.beforeEach((to, from) => {
   const store = useCounterStore()
-  if (to.name === 'userinfo' && !store.isLogin) {
-    window.alert('로그인이 필요합니다.')
-    return { name : 'LoginView' }
-  }
+  // if (to.name === 'userinfo' && !store.isLogin) {
+  //   window.alert('로그인이 필요합니다.')
+  //   return { name : 'LoginView' }
+  // }
   if ((to.name === 'SignUpView' || to.name==="LoginView") && (store.isLogin)) {
     window.alert('이미 로그인이 되어있습니다.')
     return { name: 'home'}

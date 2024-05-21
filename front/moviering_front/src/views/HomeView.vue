@@ -58,7 +58,7 @@ import data from '@/fixtures/movies2.json'
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px;
+  padding: 50px 0 100px 0;
 }
 .main_row1{
   display: flex;

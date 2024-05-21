@@ -1,5 +1,6 @@
 <template>
   <div class="signup_container">
+    <p>back to <RouterLink :to="{ path: '/accounts' }">accounts</RouterLink></p>
     <h1>Sign Up Page</h1>
     <form @submit.prevent="signUp">
       <label for="username">username : </label>
@@ -44,6 +45,9 @@ const signUp = function () {
 </script>
 
 <style scoped>
+a{
+  color: white;
+}
 .signup_container{
   text-align: center;
 }

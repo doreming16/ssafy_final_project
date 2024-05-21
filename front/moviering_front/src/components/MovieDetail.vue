@@ -36,17 +36,17 @@
 
     <div class="row3">
       <form>
-        <input class="comment" type="text" />
+        <input class="input_comment" type="text" />
         <input class="submit_button" type="submit" value="입력" />
       </form>
     </div>
 
     <div class="row4">
-      <div v-for="count in count_stars" class="box_comment">
+      <div v-for="count in 5" class="box_comment">
         <div class="title_comment">
           <div class="user_comment">user1</div>
           <div class="count_stars">
-            <div v-for="count in count_stars">
+            <div v-for="count in 4">
               <img
                 class="star_comment"
                 src="../icons/star1.png"
@@ -69,6 +69,7 @@ const count_stars = ref(null);
 
 <style scoped>
 .container .row1 {
+  font-family: SUITE;
   display: flex;
   justify-content: center;
   margin: 50px 0px;
@@ -92,6 +93,7 @@ img {
   font-size: 30px;
 }
 #question {
+  font-family: SUITE;
   font-size: 25px;
   color: rgb(255, 204, 204);
 }
@@ -110,7 +112,7 @@ img {
   height: 20px;
   margin: 5px;
 }
-.comment {
+.input_comment {
   width: 800px;
   height: 200px;
   background-color: transparent;
