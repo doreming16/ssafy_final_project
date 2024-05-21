@@ -4,7 +4,6 @@
           <!-- 성별 / 연령대 / 선호하는 영화 장르 / 관람시 중요한 요소 / 생일 -->
 <!-- Test for v-model(FormData 안에 넣기) -->
 You're in dataInputTest branch
-hello
         <div>
           <label for="gender" class="form_label">성별</label>
           <div class="form_content">
@@ -84,12 +83,12 @@ hello
           <div class="form_content form_genre_list">
             <div v-for="genre in data" style="margin: 10px;">
               <!-- 데이터 pk로 받자 -->
-              <input type="checkbox" :value="genre.pk" :id="genre.fields.name" v-model="formData.favorite_genre">
+              <input type="checkbox" :value="genre.pk" :id="genre.fields.name" v-model="favorite_genre">
               <label :for="genre.fields.name">{{ genre.fields.name }}</label>
             </div>
           </div>
         </div>
-        <p style="color:green;">{{ formData.favorite_genre }}</p>
+        <p style="color:green;">{{ favorite_genre }}</p>
       </div>
 
       <div class="form_divide" style="margin: 30px 0px;">
@@ -151,10 +150,12 @@ hello
   import data from '@/fixtures/genres.json';
   import axios from 'axios';
   
+  const favorite_genre = ref('')
+
   const formData  = ref({
+    // user_id: '',
     gender: '',
     era: '',
-    favorite_gerne: [],
     viewing_environment: '',
     birthday: null
   });
