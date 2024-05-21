@@ -3,7 +3,8 @@
       <form @submit.prevent="submitForm" style="padding: 50px;">
           <!-- 성별 / 연령대 / 선호하는 영화 장르 / 관람시 중요한 요소 / 생일 -->
 <!-- Test for v-model(FormData 안에 넣기) -->
-
+You're in dataInputTest branch
+hello
         <div>
           <label for="gender" class="form_label">성별</label>
           <div class="form_content">
