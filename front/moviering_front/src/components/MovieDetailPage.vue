@@ -93,6 +93,7 @@
   
   <style scoped>
   .container .row1 {
+    font-family: SUITE;
     display: flex;
     justify-content: center;
     margin: 50px 0px;
@@ -107,6 +108,7 @@
     background-color: white;
   }
   .box_right {
+    font-family: SUITE;
     width: 500px;
   }
   .list_name {
@@ -120,6 +122,7 @@
     color: rgb(255, 204, 204);
   }
   .row2 {
+    font-family: SUITE;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -8,7 +8,6 @@ import MovieDetailPage from "@/components/MovieDetailPage.vue"
 import SignUpView from "@/views/SignUpView.vue";
 import LoginView from "@/views/LoginView.vue";
 import { useCounterStore } from '@/stores/counter'
-import aitest from '@/components/aitest.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
