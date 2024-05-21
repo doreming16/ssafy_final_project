@@ -1,24 +1,36 @@
 <template>
     <div>
-      <RouterLink :to="{ path: '/movies' }">뒤로가기</RouterLink>
+      <RouterLink :to="{ name: 'home' }">뒤로가기</RouterLink>
     </div>
     <div class="container">
       <div class="row1">
         <div class="box_left">
-          <img src="../img/movie4.jpeg" alt="detail_movie_image" />
+          <img :src="`https://image.tmdb.org/t/p/w300/${movie.poster_path}`" alt="detail_movie_image" />
         </div>
         <div id="center_line"></div>
         <div class="box_right">
-          <p id="movie_title">이곳에 영화 제목을 입력하세요</p>
-          <p>이 영화의 pk값은 {{ $route.params.id }}</p>
-          <p><span>2020-12-25</span> 개봉</p>
-          <p>16, 18, 10749</p>
-          <p>출연진</p>
+          <p id="movie_title">제목: {{ movie.title }}</p>
+          <p>장르 : {{ movie.genre_ids }}</p>
+          <p><b>줄거리</b> : {{ movie.overview }}</p>
+          <p><span>{{ movie.release_date }}</span> 개봉</p>
+          <p>평점 : {{ movie.vote_average }}</p>
         </div>
       </div>
   
       <div class="row2">
         <p id="question">이 영화, 어떠셨나요?</p>
+        <div>
+          <input type="radio">
+          <img v-for="star in 1" value='1' class="star" src="../icons/star1.png" alt="icon_star" />
+        </div> 
+        <div>
+          <input type="radio">
+          <img v-for="star in 2" value='2' class="star" src="../icons/star1.png" alt="icon_star" />
+        </div> 
+        <div>
+          <input type="radio">
+          <img v-for="star in 3" value='3' class="star" src="../icons/star1.png" alt="icon_star" />
+        </div> 
         <div>
           <input type="radio">
           <img v-for="star in 4" value='4' class="star" src="../icons/star1.png" alt="icon_star" />
@@ -69,14 +81,12 @@
   import data from '@/fixtures/movies2.json'
   
   const route = useRoute()
-  
+  const movie = ref('')
   for (const datum of data) {
     if (datum.pk == route.params.id) {
-      const movie = ref(datum)
-      console.log(movie)
+      movie.value = datum.fields
     }
   }
-
   
   const count_stars = ref(4);
   </script>

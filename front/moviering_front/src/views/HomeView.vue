@@ -20,7 +20,9 @@ import data from '@/fixtures/movies2.json'
     <p class="main_subtitle">Movie List(all)</p>
     <div class="movie_list_all" >
       <div v-for="movie in data">
-        <img class="poster_main" :src="`https://image.tmdb.org/t/p/w300/${movie.fields.poster_path}`" alt="Image">
+        <RouterLink :to="{ name: 'movie_detail_page', params: { id : movie.pk }}">
+          <img class="poster_main" :src="`https://image.tmdb.org/t/p/w300/${movie.fields.poster_path}`" alt="Image">
+        </RouterLink>
       </div>
     </div>
     <span style="margin: 30px 0px;">---</span>
@@ -28,15 +30,19 @@ import data from '@/fixtures/movies2.json'
     <p class="main_subtitle">Movie List(average > 7.5)</p>
     <div class="movie_list_all" >
       <div v-for="movie in data">
-        <img v-if="movie.fields.vote_average > 7.5" class="poster_main" :src="`https://image.tmdb.org/t/p/w300/${movie.fields.poster_path}`" alt="Image">
+        <RouterLink :to="{ name: 'movie_detail_page', params: { id : movie.pk }}">
+          <img v-if="movie.fields.vote_average > 7.5" class="poster_main" :src="`https://image.tmdb.org/t/p/w300/${movie.fields.poster_path}`" alt="Image">
+        </RouterLink>
       </div>
     </div>
     <span style="margin: 30px 0px;">---</span>
 
-    <p class="main_subtitle">Movie List(release date > 2000-00-00 )</p>
+    <p class="main_subtitle">Movie List(release date > 2000-01-01 )</p>
     <div class="movie_list_all" >
       <div v-for="movie in data">
-        <img v-if="movie.fields.release_date > '2000-00-00'" class="poster_main" :src="`https://image.tmdb.org/t/p/w300/${movie.fields.poster_path}`" alt="Image">
+        <RouterLink :to="{ name: 'movie_detail_page', params: { id : movie.pk }}">
+          <img v-if="movie.fields.release_date > '2000-01-01'" class="poster_main" :src="`https://image.tmdb.org/t/p/w300/${movie.fields.poster_path}`" alt="Image">
+        </RouterLink>
       </div>
     </div>
     <span style="margin: 30px 0px;">---</span>
