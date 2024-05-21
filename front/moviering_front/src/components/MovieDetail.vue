@@ -69,6 +69,7 @@ const count_stars = ref(null);
 
 <style scoped>
 .container .row1 {
+  font-family: SUITE;
   display: flex;
   justify-content: center;
   margin: 50px 0px;
@@ -92,6 +93,7 @@ img {
   font-size: 30px;
 }
 #question {
+  font-family: SUITE;
   font-size: 25px;
   color: rgb(255, 204, 204);
 }
