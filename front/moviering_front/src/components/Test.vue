@@ -96,7 +96,6 @@
       </div>
 
       <div>
-        <!-- 연령대 .. 이 서비스를 12-19세도 많이 이용할까? -->
         <span for="viewing_environment" class="form_label">영화 관람 시 나에게 중요한 요소</span>
         <div class="form_content" style="column-gap: 10px;">
           <p>
@@ -120,8 +119,7 @@
           <p>
             <input type="radio" v-model="formData.viewing_environment" id="etc" value="etc"/>
             <label for="etc">
-              기타
-              <!-- '고려하지 않음' ? -->
+              고려하지 않음
             </label>
           </p>
         </div>
@@ -149,11 +147,11 @@
   import { ref } from 'vue';
   import data from '@/fixtures/genres.json';
   import axios from 'axios';
-  
+
   const formData  = ref({
     gender: '',
     era: '',
-    favorite_gerne: [],
+    favorite_genre: [],
     viewing_environment: '',
     birthday: null
   });

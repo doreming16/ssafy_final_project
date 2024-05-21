@@ -21,7 +21,7 @@ def submit_form(request):
         form_data = UserInfo(
             gender=data.get('gender', ''),
             era= data.get('era', ''),
-            favorite_gerne = data.get('favorite_gerne', []),
+            favorite_genre = data.get('favorite_genre', []),
             viewing_environment=data.get('viewing_environment', ''),
             birthday=data.get('birthday', None)
         )
