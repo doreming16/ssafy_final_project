@@ -44,10 +44,12 @@ import data from '@/fixtures/movies2.json'
     <p class="main_subtitle">Movie List(music)</p>
     <div class="movie_list_all" >
       <div v-for="movie in data">
-        <img v-if="movie.fields.genre_ids.includes(10402)" class="poster_main" :src="`https://image.tmdb.org/t/p/w300/${movie.fields.poster_path}`" alt="Image">
+        <RouterLink :to="{ name: 'movie_detail_page', params: { id : movie.pk }}">
+          <img v-if="movie.fields.genre_ids.includes(10402)" class="poster_main" :src="`https://image.tmdb.org/t/p/w300/${movie.fields.poster_path}`" alt="Image">
+        </RouterLink>
       </div>
     </div>
-
+    
   </div>
 </template>
 
