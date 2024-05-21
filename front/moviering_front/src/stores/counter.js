@@ -64,6 +64,7 @@ export const useCounterStore = defineStore(
           console.log("로그인 완료");
           console.log(res.data);
           token.value = res.data.key;
+          // console.log(token.value)
           router.push({ name : 'home' })
         })
         .catch((err) => {

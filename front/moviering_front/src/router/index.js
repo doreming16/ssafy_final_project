@@ -4,9 +4,11 @@ import Accounts from "@/views/AccountsView.vue";
 import Movies from "@/views/MoviesView.vue";
 import UserInfo from "@/components/UserInfo.vue";
 import MovieDetail from "@/components/MovieDetail.vue";
+import MovieDetailPage from "@/components/MovieDetailPage.vue"
 import SignUpView from "@/views/SignUpView.vue";
 import LoginView from "@/views/LoginView.vue";
 import { useCounterStore } from '@/stores/counter'
+import aitest from '@/components/aitest.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -46,6 +48,11 @@ const router = createRouter({
       name: "movie_detail",
       component: MovieDetail,
     },
+    {
+      path: "/movies/detail/:id",
+      name: "movie_detail_page",
+      component: MovieDetailPage
+    }
   ],
 });
 

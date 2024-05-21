@@ -19,6 +19,7 @@ def submit_form(request):
     if request.method == 'POST':
         data = json.loads(request.body)
         form_data = UserInfo(
+            isSpecial=data.get('isSpecial', None),
             gender=data.get('gender', ''),
             era= data.get('era', ''),
             favorite_genre = data.get('favorite_genre', []),

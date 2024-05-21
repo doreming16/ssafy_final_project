@@ -1,7 +1,21 @@
 <template>
   <div>
     <form @submit.prevent="submitForm" style="padding: 50px;">
-        <!-- 성별 / 연령대 / 선호하는 영화 장르 / 관람시 중요한 요소 / 생일 -->
+
+      <div>
+        <label for="gender" class="form_label">오늘의 기념일 관련 영화를 추천받으시겠습니까?</label>
+        <div class="form_content">
+          <input type="radio" name="isSpecial" value="True" id="isSpecial_true" v-model="formData.isSpecial"/>
+          <label for="isSpecial_true">예</label>
+          <input type="radio" name="isSpecial" value="False" id="isSpecial_false" v-model="formData.isSpecial"/>
+          <label for="isSpecial_false">아니요</label>
+        </div>
+        <p style="color:green;">{{ formData.isSpecial }}</p>
+      </div>
+
+      <div class="form_divide" style="margin: 30px 0px;">
+        -------------------------------------------------------------------------------
+      </div>
 
       <div>
         <label for="gender" class="form_label">성별</label>
@@ -27,45 +41,31 @@
         <div class="form_content" style="display: flex; flex-direction:column;">
           <p>
             <input type="radio" name="era" id="bf1970" value="bf1970" v-model="formData.era"/>
-            <label for="bf1970">
-              1970년대 이전
-            </label>
+            <label for="bf1970">1970년대 이전</label>
           </p>
           <p>
             <input type="radio" name="era" id="1970s" value="1970s" v-model="formData.era"/>
-            <label for="1970s">
-              1970년대
-            </label>
+            <label for="1970s">1970년대</label>
           </p>
           <p>
             <input type="radio" name="era" id="1980s" value="1980s" v-model="formData.era"/>
-            <label for="1980s">
-              1980년대
-            </label>
+            <label for="1980s">1980년대</label>
           </p>
           <p>
             <input type="radio" name="era" id="1990s" value="1990s" v-model="formData.era"/>
-            <label for="1990s">
-              1990년대
-            </label>
+            <label for="1990s">1990년대</label>
           </p>
           <p>
             <input type="radio" name="era" id="2000s" value="2000s" v-model="formData.era"/>
-            <label for="2000s">
-              2000년대
-            </label>
+            <label for="2000s">2000년대</label>
           </p>
           <p>
             <input type="radio" name="era" id="2010s" value="2010s" v-model="formData.era"/>
-            <label for="2010s">
-              2010년대
-            </label>
+            <label for="2010s">2010년대</label>
           </p>
           <p>
             <input type="radio" name="era" id="af2020" value="af2020" v-model="formData.era"/>
-            <label for="af2020">
-              2020년 이후
-            </label>
+            <label for="af2020">2020년 이후</label>
           </p>
         </div>
         <p style="color:green;">{{ formData.era }}</p>
@@ -80,7 +80,6 @@
         <div style="display:flex; justify-content: center;">
           <div class="form_content form_genre_list">
             <div v-for="genre in data" style="margin: 10px;">
-              <!-- 데이터 pk로 받자 -->
               <input type="checkbox" :value="genre.pk" :id="genre.fields.name" v-model="formData.favorite_genre">
               <label :for="genre.fields.name">{{ genre.fields.name }}</label>
             </div>
@@ -94,33 +93,23 @@
       </div>
 
       <div>
-        <!-- 연령대 .. 이 서비스를 12-19세도 많이 이용할까? -->
         <span for="viewing_environment" class="form_label">영화 관람 시 나에게 중요한 요소</span>
         <div class="form_content" style="column-gap: 10px;">
           <p>
             <input type="radio" v-model="formData.viewing_environment" id="accessibility" value="accessibility"/>
-            <label for="accessibility">
-              접근성
-            </label>
+            <label for="accessibility">접근성</label>
           </p>
           <p>
             <input type="radio" v-model="formData.viewing_environment" id="sound" value="sound"/>
-            <label for="sound">
-              음향
-            </label>
+            <label for="sound">음향</label>
           </p>
           <p>
             <input type="radio" v-model="formData.viewing_environment" id="screen_width" value="screen_width"/>
-            <label for="screen_width">
-              화면 크기
-            </label>
+            <label for="screen_width">화면 크기</label>
           </p>
           <p>
             <input type="radio" v-model="formData.viewing_environment" id="etc" value="etc"/>
-            <label for="etc">
-              기타
-              <!-- '고려하지 않음' ? -->
-            </label>
+            <label for="etc">고려하지 않음</label>
           </p>
         </div>
         <p style="color:green;">{{ formData.viewing_environment }}</p>
@@ -139,6 +128,12 @@
     </div>
       <input type="submit" value="정보 등록" id="submit_info_button">
 
+      <!-- <div>
+        <span v-for="genre in data" style="margin: 10px;">
+          <label :for="genre.fields.name">{{ genre.fields.name }}</label>
+        </span>
+      </div> -->
+
     </form>
   </div>
 </template>
@@ -150,6 +145,7 @@ import axios from 'axios';
 
 
 const formData  = ref({
+  isSpecial: undefined,
   gender: '',
   era: '',
   favorite_genre: [],

@@ -7,6 +7,7 @@ class User(AbstractUser):
 
 class UserInfo(models.Model):
     # user_id = models.ForeignKey(User, models.CASCADE)
+    isSpecial = models.BooleanField(default=False)
     gender = models.TextField()
     era = models.TextField()
     favorite_genre = models.JSONField(default=list, blank=True)
