@@ -79,8 +79,8 @@
         <label class="form_label">선호하는 영화 장르</label>
         <div style="display:flex; justify-content: center;">
           <div class="form_content form_genre_list">
-            <div v-for="genre in data" style="margin: 10px;">
-              <input type="checkbox" :value="genre.pk" :id="genre.fields.name" v-model="formData.favorite_genre">
+            <div v-for="genre in data" :key="genre.pk" style="margin: 10px;">
+              <input @change="CountChecked" type="checkbox" :value="genre.pk" :id="genre.fields.name" v-model="formData.favorite_genre">
               <label :for="genre.fields.name">{{ genre.fields.name }}</label>
             </div>
           </div>
@@ -139,9 +139,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, watch, computed } from 'vue';
 import data from '@/fixtures/genres.json';
 import axios from 'axios';
+
+// https://zincod.tistory.com/217
+// https://velog.io/@7rgoong/Vue-checkBox-%EC%B5%9C%EB%8C%80-%EA%B0%9C%EC%88%98
 
 
 const formData  = ref({
@@ -152,6 +155,16 @@ const formData  = ref({
   viewing_environment: '',
   birthday: null
 });
+
+const countChecked = computed(() => formData.value.favorite_genre.length);
+
+const CountChecked = function (event) {
+  if (countChecked.value > 5) {
+    formData.value.favorite_genre.pop();
+    alert('선호 장르는 최대 5개까지 선택 가능합니다.')
+  }
+};
+
 
 const submitForm = () => {
     console.log(formData.value)
