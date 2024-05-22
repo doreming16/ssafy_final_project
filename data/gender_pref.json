@@ -1,0 +1,44 @@
+[
+  {
+    "gender": "male",
+    "preferred_genres": [
+      {
+        "pk": 28,
+        "name": "액션"
+      },
+      {
+        "pk": 12,
+        "name": "모험"
+      },
+      {
+        "pk": 878,
+        "name": "SF"
+      },
+      {
+        "pk": 53,
+        "name": "스릴러"
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "preferred_genres": [
+      {
+        "pk": 18,
+        "name": "드라마"
+      },
+      {
+        "pk": 10749,
+        "name": "로맨스"
+      },
+      {
+        "pk": 10751,
+        "name": "가족"
+      },
+      {
+        "pk": 35,
+        "name": "코미디"
+      }
+    ]
+  }
+]
