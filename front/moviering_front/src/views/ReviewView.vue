@@ -1,60 +1,65 @@
 <template>
-<div class="row2">
-        <p id="question">이 영화, 어떠셨나요?</p>
-        <div>
-          <input type="radio">
-          <img v-for="star in 1" value='1' class="star" src="../icons/star1.png" alt="icon_star" />
-        </div> 
-        <div>
-          <input type="radio">
-          <img v-for="star in 2" value='2' class="star" src="../icons/star1.png" alt="icon_star" />
-        </div> 
-        <div>
-          <input type="radio">
-          <img v-for="star in 3" value='3' class="star" src="../icons/star1.png" alt="icon_star" />
-        </div> 
-        <div>
-          <input type="radio">
-          <img v-for="star in 4" value='4' class="star" src="../icons/star1.png" alt="icon_star" />
-        </div> 
-        <div>
-          <input type="radio">
-          <img v-for="star in 5" value='5'  class="star" src="../icons/star1.png" alt="icon_star" />
-        </div>
-        <!-- <div class="count_stars">
-          <div v-for="count in count_stars">
-            <img class="star" src="../icons/star1.png" alt="icon_star" />
-          </div>
-        </div> -->
-      </div>
 
-      <div class="row3">
-        <form>
-          <input class="comment" type="text" />
-          <input class="submit_button" type="submit" value="입력" />
-        </form>
+
+<div class="row2">
+  <p id="question">이 영화, 어떠셨나요?</p>   
+</div>
+
+<div>
+    <form @submit.prevent="createReview">
+      <div>
+        <label for="rating">평점 : </label>
+        <input type="text" v-model.trim="rating" id="rating">
       </div>
-  
-      <div class="row4">
-        <div v-for="count in count_stars" class="box_comment">
-          <div class="title_comment">
-            <div class="user_comment">user1</div>
-            <div class="count_stars">
-              <div v-for="count in count_stars">
-                <img
-                  class="star_comment"
-                  src="../icons/star1.png"
-                  alt="icon_star"
-                />
-              </div>
-            </div>
-          </div>
-          <div>show Comment here</div>
-        </div>
+      <div>
+        <label for="content">감상평 : </label>
+        <textarea v-model.trim="content" id="content"></textarea>
       </div>
+      <input type="submit" value="작성">
+    </form>
+</div>
+
 </template>
   
 <script setup>
+import axios from 'axios'
+import { onMounted, ref, defineProps } from 'vue'
+import { useCounterStore } from '@/stores/counter'
+import { useRouter } from 'vue-router'
+
+const store = useCounterStore()
+const rating = ref(null)
+const content = ref(null)
+const router = useRouter()
+
+onMounted(() => {
+    store.getReviews()
+})
+
+const props = defineProps({
+  Id: Number
+})
+
+const createReview = function () {
+  axios({
+    method: 'post',
+    url: `${store.API_URL}/detail/${props.Id}/reviews/`,
+    data: {
+      rating: rating.value,
+      content: content.value
+    },
+    headers: {
+      Authorization: `Token ${store.token}`
+    }
+  })
+    .then((response) => {
+      // console.log(response.data)
+      router.push({ name: 'ReviewView' })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+}
 </script>
 
 <style scoped>

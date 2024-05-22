@@ -7,6 +7,7 @@ export const useCounterStore = defineStore(
   "counter",
   () => {
     const images = ref([])
+    const reviews = ref([])
     const API_URL = "http://127.0.0.1:8000";
 
     const getImages = function () {
@@ -16,17 +17,31 @@ export const useCounterStore = defineStore(
       })
     }
 
+    const getReviews = function () {
+      axios({
+        method: 'get',
+        url: `${API_URL}/movies/:id/reviews/`
+      })
+      .then(res => {
+        // console.log(res)
+        // console.log(res.data)
+        reviews.value = res.data
+      })
+      .catch(err => console.log(err))
+    }
+
+    
     // token 저장
     const token = ref(null);
-
+    
     const signUp = function (payload) {
       const username = payload.username;
       const password1 = payload.password1;
       const password2 = payload.password2;
-
+      
       // const { username, password, passwordcheck } = payload
-
-
+      
+      
       axios({
         method: "post",
         url: `${API_URL}/accounts/signup/`,
@@ -36,22 +51,22 @@ export const useCounterStore = defineStore(
           password2
         },
       })
-        .then((res) => {
-          console.log("회원가입 완료");
-          const password = password1
-          logIn({ username, password })
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      .then((res) => {
+        console.log("회원가입 완료");
+        const password = password1
+        logIn({ username, password })
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     };
-
+    
     const router = useRouter()  
-  
+    
     const logIn = function (payload) {
       const username = payload.username;
       const password = payload.password;
-
+      
       axios({
         method: "post",
         url: `${API_URL}/accounts/login/`,
@@ -60,8 +75,8 @@ export const useCounterStore = defineStore(
           password,
         },
       })
-        .then((res) => {
-          console.log("로그인 완료");
+      .then((res) => {
+        console.log("로그인 완료");
           console.log(res.data);
           token.value = res.data.key;
           // console.log(token.value)
@@ -70,7 +85,8 @@ export const useCounterStore = defineStore(
         .catch((err) => {
           console.log(err);
         });
-    };
+      };
+      
 
     const isLogin = computed(() => {
       if (token.value === null){
@@ -79,7 +95,7 @@ export const useCounterStore = defineStore(
         return true
       }
     })
-    return { API_URL, signUp, logIn, token, isLogin };
+    return { API_URL, signUp, logIn, token, isLogin, getReviews };
   },
   { persist: true }
 );
