@@ -54,7 +54,7 @@ const router = createRouter({
       component: MovieDetailPage,
     },
     { 
-      path: "/movies/detail/:id/rate",
+      path: "/movies/detail/:id/review",
       name: "ReviewView",
       component: ReviewView,
     }
