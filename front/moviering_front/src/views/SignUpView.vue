@@ -1,6 +1,6 @@
 <template>
   <div class="signup_container">
-    <p>back to <RouterLink :to="{ path: '/accounts' }">accounts</RouterLink></p>
+    <RouterLink :to="{ path: '/accounts' }">back</RouterLink>
     <h1>Sign Up Page</h1>
     <form @submit.prevent="signUp">
       <label for="username">username : </label>
@@ -47,6 +47,10 @@ const signUp = function () {
 <style scoped>
 a{
   color: white;
+  text-decoration: none;
+}
+a:hover{
+  color: pink;
 }
 .signup_container{
   text-align: center;
@@ -70,5 +74,9 @@ a{
   background-color: transparent;
   margin: 50px;
   cursor: pointer;
+}
+.signup_submit_button:hover{
+  background-color: pink;
+  color: black;
 }
 </style>

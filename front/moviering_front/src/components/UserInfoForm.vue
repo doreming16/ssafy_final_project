@@ -108,8 +108,8 @@
             <label for="screen_width">화면 크기</label>
           </p>
           <p>
-            <input type="radio" v-model="formData.viewing_environment" id="etc" value="etc"/>
-            <label for="etc">고려하지 않음</label>
+            <input type="radio" v-model="formData.viewing_environment" id="none" value="none"/>
+            <label for="none">고려하지 않음</label>
           </p>
         </div>
         <p style="color:green;">{{ formData.viewing_environment }}</p>
@@ -175,6 +175,7 @@ const submitForm = () => {
       console.log(res.data)
     }).catch(err => {
       console.log(err)
+      alert('입력 내용을 확인해주세요.')
     })
   };
 
@@ -229,5 +230,9 @@ h3 {
   background-color: transparent;
   margin: 50px;
   cursor: pointer;
+}
+#submit_info_button:hover{
+  background-color: pink;
+  color: black;
 }
 </style>

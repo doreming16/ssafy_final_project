@@ -1,22 +1,10 @@
 <template>
   <div class="accounts_container">
-    <div>
-      <RouterLink :to="{ path: '/accounts/login' }">
-        <button class="accounts_button">로그인</button>
-      </RouterLink>
-      <RouterLink :to="{ path: '/accounts/signup' }">
-        <button class="accounts_button">회원가입</button>
-      </RouterLink>
-    </div>
-
-    <div class="form_divide" style="margin: 30px 0px;">
-        ---
-    </div>
-      
+    <p style="margin-bottom: 70px;"><RouterLink :to="{ path: '/accounts' }" class="back_tag">back</RouterLink></p>
     <button class="userinfo_button" @click="toUserInfo">데이터 입력하기</button>
     
     <UserInfoDetail />
-    
+
     <RouterView />
   </div>
 </template>
@@ -90,27 +78,30 @@ onMounted(() => {
 .accounts_container {
   text-align: center;
 }
-.accounts_button{
-  font-family: SUITE;
-  font-size: 13px;
+.back_tag{
   color: white;
-  /* border: none; */
-  /* border-radius: 5px; */
-  padding: 5px 8px;
-  border: 1px solid pink;
-  background-color: transparent;
-  margin: 15px;
-  cursor: pointer;
+  text-decoration: none;
+}
+.back_tag:hover{
+  color: pink;
 }
 .userinfo_button{
   font-family: SUITE;
-  font-size: 18px;
+  font-size: 15px;
   color: white;
-  border: none;
-  border-bottom: 2px solid pink;
+  /* border: none; */
+  border: 2px solid pink;
+  padding: 10px 15px;
   background-color: transparent;
-  margin: 30px;
+  margin: 30px 0 50px 0;
   cursor: pointer;
+}
+.back_tag:hover{
+  color: pink;
+}
+.userinfo_button:hover{
+  background-color: pink;
+  color: black;
 }
 .form_box{
   margin: 0;
