@@ -143,10 +143,6 @@ import { ref, watch, computed } from 'vue';
 import data from '@/fixtures/genres.json';
 import axios from 'axios';
 
-// https://zincod.tistory.com/217
-// https://velog.io/@7rgoong/Vue-checkBox-%EC%B5%9C%EB%8C%80-%EA%B0%9C%EC%88%98
-
-
 const formData  = ref({
   isSpecial: undefined,
   gender: '',
