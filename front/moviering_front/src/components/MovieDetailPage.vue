@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="go_back_link">
       <RouterLink :to="{ name: 'home' }">뒤로가기</RouterLink>
     </div>
     <div class="container">
@@ -16,60 +16,8 @@
           <p>평점 : {{ movie.vote_average }}</p>
         </div>
       </div>
-  
-      <div class="row2">
-        <p id="question">이 영화, 어떠셨나요?</p>
-        <div>
-          <input type="radio">
-          <img v-for="star in 1" value='1' class="star" src="../icons/star1.png" alt="icon_star" />
-        </div> 
-        <div>
-          <input type="radio">
-          <img v-for="star in 2" value='2' class="star" src="../icons/star1.png" alt="icon_star" />
-        </div> 
-        <div>
-          <input type="radio">
-          <img v-for="star in 3" value='3' class="star" src="../icons/star1.png" alt="icon_star" />
-        </div> 
-        <div>
-          <input type="radio">
-          <img v-for="star in 4" value='4' class="star" src="../icons/star1.png" alt="icon_star" />
-        </div> 
-        <div>
-          <input type="radio">
-          <img v-for="star in 5" value='5'  class="star" src="../icons/star1.png" alt="icon_star" />
-        </div>
-        <!-- <div class="count_stars">
-          <div v-for="count in count_stars">
-            <img class="star" src="../icons/star1.png" alt="icon_star" />
-          </div>
-        </div> -->
-      </div>
-  
-      <div class="row3">
-        <form>
-          <input class="comment" type="text" />
-          <input class="submit_button" type="submit" value="입력" />
-        </form>
-      </div>
-  
-      <div class="row4">
-        <div v-for="count in count_stars" class="box_comment">
-          <div class="title_comment">
-            <div class="user_comment">user1</div>
-            <div class="count_stars">
-              <div v-for="count in count_stars">
-                <img
-                  class="star_comment"
-                  src="../icons/star1.png"
-                  alt="icon_star"
-                />
-              </div>
-            </div>
-          </div>
-          <div>show Comment here</div>
-        </div>
-      </div>
+
+      <ReviewView />
     </div>
   </template>
   
@@ -79,6 +27,7 @@
   import { RouterLink, RouterView } from "vue-router";
   import { useRoute } from "vue-router";
   import data from '@/fixtures/movies2.json'
+  import ReviewView from '@/views/ReviewView.vue'
   
   const route = useRoute()
   const movie = ref('')
@@ -92,6 +41,21 @@
   </script>
   
   <style scoped>
+  #go_back_link{
+    text-align: center;
+    
+  }
+  a{
+    color: white;
+    font-family: SUITE;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 5px 8px;
+    border: 1px solid pink;
+    background-color: transparent;
+    margin: 15px;
+    cursor: pointer;
+  }
   .container .row1 {
     font-family: SUITE;
     display: flex;

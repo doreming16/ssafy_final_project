@@ -11,7 +11,7 @@
         "model": "movies.Anniv",
         "pk": 2,
         "fields": {
-            "name": "",
+            "name": "과학 허구의 날",
             "date": "2024-01-02"
         }
     },
@@ -19,7 +19,7 @@
         "model": "movies.Anniv",
         "pk": 3,
         "fields": {
-            "name": "",
+            "name": "잠의 날 축제",
             "date": "2024-01-03"
         }
     },
@@ -27,7 +27,7 @@
         "model": "movies.Anniv",
         "pk": 4,
         "fields": {
-            "name": "",
+            "name": "세계 점자의 날",
             "date": "2024-01-04"
         }
     },
@@ -43,7 +43,10 @@
         "model": "movies.Anniv",
         "pk": 6,
         "fields": {
-            "name": "",
+            "name": [
+                "콩의 날(미국)",
+                "세계 전쟁 고아의 날"
+            ],
             "date": "2024-01-06"
         }
     },
@@ -147,7 +150,7 @@
         "model": "movies.Anniv",
         "pk": 19,
         "fields": {
-            "name": "",
+            "name": "팝콘의 날(미국)",
             "date": "2024-01-19"
         }
     },
@@ -1142,7 +1145,8 @@
         "fields": {
             "name": [
                 "부부의 날",
-                "대화와 발전을 위한 세계 문화 다양성의 날"
+                "대화와 발전을 위한 세계 문화 다양성의 날",
+                "세계 차의 날"
             ],
             "date": "2024-05-21"
         }
@@ -1394,7 +1398,10 @@
         "model": "movies.Anniv",
         "pk": 173,
         "fields": {
-            "name": "세계 음악의 날",
+            "name": [ 
+                "세계 음악의 날",
+                "세계 요가의 날"
+            ],
             "date": "2024-06-21"
         }
     },
@@ -1410,7 +1417,10 @@
         "model": "movies.Anniv",
         "pk": 175,
         "fields": {
-            "name": "유엔 공공 서비스의 날",
+            "name": [
+                "유엔 공공 서비스의 날",
+                "세계 과부의 날"
+            ],
             "date": "2024-06-23"
         }
     },
@@ -1426,7 +1436,10 @@
         "model": "movies.Anniv",
         "pk": 177,
         "fields": {
-            "name": "6·25전쟁일",
+            "name": [
+                "6·25전쟁일",
+                "선원의 날"
+            ],
             "date": "2024-06-25"
         }
     },
@@ -1434,7 +1447,10 @@
         "model": "movies.Anniv",
         "pk": 178,
         "fields": {
-            "name": "",
+            "name": [                
+                "약물 남용 및 불법거래와의 국제 투쟁의 날",
+                "고문 희생자 유엔 국제 원조의 날"
+            ],
             "date": "2024-06-26"
         }
     },
@@ -1474,7 +1490,7 @@
         "model": "movies.Anniv",
         "pk": 183,
         "fields": {
-            "name": "",
+            "name": "의사의 날",
             "date": "2024-07-01"
         }
     },
@@ -1490,7 +1506,7 @@
         "model": "movies.Anniv",
         "pk": 185,
         "fields": {
-            "name": "",
+            "name": "세계 비닐봉투 안 쓰는 날",
             "date": "2024-07-03"
         }
     },
@@ -1530,7 +1546,7 @@
         "model": "movies.Anniv",
         "pk": 190,
         "fields": {
-            "name": "",
+            "name": "작가의 날",
             "date": "2024-07-08"
         }
     },
@@ -1554,7 +1570,7 @@
         "model": "movies.Anniv",
         "pk": 193,
         "fields": {
-            "name": "",
+            "name": "세계 인구의 날",
             "date": "2024-07-11"
         }
     },
@@ -1602,7 +1618,10 @@
         "model": "movies.Anniv",
         "pk": 199,
         "fields": {
-            "name": "제헌절",
+            "name": [
+                "제헌절",
+                "세계 이모지의 날"
+            ],
             "date": "2024-07-17"
         }
     },
@@ -1610,7 +1629,7 @@
         "model": "movies.Anniv",
         "pk": 200,
         "fields": {
-            "name": "",
+            "name": "국제 넬슨 만델라의 날",
             "date": "2024-07-18"
         }
     },
@@ -1778,7 +1797,10 @@
         "model": "movies.Anniv",
         "pk": 221,
         "fields": {
-            "name": "",
+            "name": [
+                "세계 요들의 날",
+                "세계 고양이의 날"
+            ],
             "date": "2024-08-08"
         }
     },
@@ -1786,7 +1808,7 @@
         "model": "movies.Anniv",
         "pk": 222,
         "fields": {
-            "name": "",
+            "name": "국제 원주민의 날",
             "date": "2024-08-09"
         }
     },
@@ -1810,7 +1832,7 @@
         "model": "movies.Anniv",
         "pk": 225,
         "fields": {
-            "name": "",
+            "name": "국제 청소년의 날",
             "date": "2024-08-12"
         }
     },
@@ -1818,7 +1840,7 @@
         "model": "movies.Anniv",
         "pk": 226,
         "fields": {
-            "name": "",
+            "name": "국제 왼손잡이의 날",
             "date": "2024-08-13"
         }
     },
@@ -1826,7 +1848,7 @@
         "model": "movies.Anniv",
         "pk": 227,
         "fields": {
-            "name": "",
+            "name": "국제 도마뱀의 날",
             "date": "2024-08-14"
         }
     },
@@ -1866,7 +1888,7 @@
         "model": "movies.Anniv",
         "pk": 232,
         "fields": {
-            "name": "",
+            "name": "세계 인도주의의 날",
             "date": "2024-08-19"
         }
     },
@@ -1898,7 +1920,7 @@
         "model": "movies.Anniv",
         "pk": 236,
         "fields": {
-            "name": "",
+            "name": "국제 노예무역과 그 철폐 기념의 날",
             "date": "2024-08-23"
         }
     },
@@ -1922,7 +1944,7 @@
         "model": "movies.Anniv",
         "pk": 239,
         "fields": {
-            "name": "",
+            "name": "나미비아의 날",
             "date": "2024-08-26"
         }
     },
@@ -1946,7 +1968,7 @@
         "model": "movies.Anniv",
         "pk": 242,
         "fields": {
-            "name": "",
+            "name": "핵 실험 국제 반대의 날",
             "date": "2024-08-29"
         }
     },
@@ -2026,7 +2048,10 @@
         "model": "movies.Anniv",
         "pk": 252,
         "fields": {
-            "name": "",
+            "name": [
+                "국제 문해의 날",
+                "중력의 날"
+            ],
             "date": "2024-09-08"
         }
     },
@@ -2042,7 +2067,7 @@
         "model": "movies.Anniv",
         "pk": 254,
         "fields": {
-            "name": "",
+            "name": "세계 자살 예방의 날",
             "date": "2024-09-10"
         }
     },
@@ -2082,7 +2107,7 @@
         "model": "movies.Anniv",
         "pk": 259,
         "fields": {
-            "name": "",
+            "name": "국제 민주주의의 날",
             "date": "2024-09-15"
         }
     },
@@ -2090,7 +2115,7 @@
         "model": "movies.Anniv",
         "pk": 260,
         "fields": {
-            "name": "",
+            "name": "오존층 국제 보존의 날",
             "date": "2024-09-16"
         }
     },
@@ -2130,7 +2155,7 @@
         "model": "movies.Anniv",
         "pk": 265,
         "fields": {
-            "name": "",
+            "name": "국제 평화의 날",
             "date": "2024-09-21"
         }
     },
@@ -2138,7 +2163,7 @@
         "model": "movies.Anniv",
         "pk": 266,
         "fields": {
-            "name": "",
+            "name": "세계 자동차 없는 날",
             "date": "2024-09-22"
         }
     },
@@ -2178,7 +2203,7 @@
         "model": "movies.Anniv",
         "pk": 271,
         "fields": {
-            "name": "",
+            "name": "세계 관광의 날",
             "date": "2024-09-27"
         }
     },
@@ -2186,7 +2211,10 @@
         "model": "movies.Anniv",
         "pk": 272,
         "fields": {
-            "name": "",
+            "name": [
+                "세계 광견병의 날",
+                "세계 알권리의 날"
+            ],
             "date": "2024-09-28"
         }
     },
@@ -2194,7 +2222,7 @@
         "model": "movies.Anniv",
         "pk": 273,
         "fields": {
-            "name": "",
+            "name": "세계 심장의 날",
             "date": "2024-09-29"
         }
     },
@@ -2210,7 +2238,11 @@
         "model": "movies.Anniv",
         "pk": 275,
         "fields": {
-            "name": "국군의 날",
+            "name": [
+                "국군의 날",
+                "세계 채식인의 날",
+                "국제 커피의 날"
+            ],
             "date": "2024-10-01"
         }
     },
@@ -2218,7 +2250,10 @@
         "model": "movies.Anniv",
         "pk": 276,
         "fields": {
-            "name": "노인의 날",
+            "name": [
+                "노인의 날",
+                "국제 비폭력의 날"
+            ],
             "date": "2024-10-02"
         }
     },
@@ -2226,7 +2261,10 @@
         "model": "movies.Anniv",
         "pk": 277,
         "fields": {
-            "name": "개천절",
+            "name": [
+                "개천절",
+                "세계 미소의 날"
+            ],
             "date": "2024-10-03"
         }
     },
@@ -2234,7 +2272,7 @@
         "model": "movies.Anniv",
         "pk": 278,
         "fields": {
-            "name": "",
+            "name": "세계 동물의 날",
             "date": "2024-10-04"
         }
     },
@@ -2242,7 +2280,10 @@
         "model": "movies.Anniv",
         "pk": 279,
         "fields": {
-            "name": "세계 한인의 날",
+            "name": [
+                "세계 한인의 날",
+                "세계 교사의 날"
+            ],
             "date": "2024-10-05"
         }
     },
@@ -2266,7 +2307,7 @@
         "model": "movies.Anniv",
         "pk": 282,
         "fields": {
-            "name": "",
+            "name": "세계 인도주의자 행동의 날",
             "date": "2024-10-08"
         }
     },
@@ -2274,7 +2315,10 @@
         "model": "movies.Anniv",
         "pk": 283,
         "fields": {
-            "name": "한글날",
+            "name": [
+                "한글날",
+                "세계 우편의 날"
+            ],
             "date": "2024-10-09"
         }
     },
@@ -2282,7 +2326,10 @@
         "model": "movies.Anniv",
         "pk": 284,
         "fields": {
-            "name": "",
+            "name": [
+                "국제 정신 건강의 날",
+                "세계 사형제 반대의 날"
+            ],
             "date": "2024-10-10"
         }
     },
@@ -2290,7 +2337,7 @@
         "model": "movies.Anniv",
         "pk": 285,
         "fields": {
-            "name": "",
+            "name": "커밍아웃의 날",
             "date": "2024-10-11"
         }
     },
@@ -2306,7 +2353,7 @@
         "model": "movies.Anniv",
         "pk": 287,
         "fields": {
-            "name": "",
+            "name": "국제 재해 감소의 날",
             "date": "2024-10-13"
         }
     },
@@ -2322,7 +2369,10 @@
         "model": "movies.Anniv",
         "pk": 289,
         "fields": {
-            "name": "체육의 날",
+            "name": [
+                "체육의 날",
+                "국제 농촌 여성의 날"
+            ],
             "date": "2024-10-15"
         }
     },
@@ -2330,7 +2380,10 @@
         "model": "movies.Anniv",
         "pk": 290,
         "fields": {
-            "name": "부마 민주항쟁 기념일",
+            "name": [
+                "부마 민주항쟁 기념일",
+                "세계 식량의 날"
+            ],
             "date": "2024-10-16"
         }
     },
@@ -2338,7 +2391,7 @@
         "model": "movies.Anniv",
         "pk": 291,
         "fields": {
-            "name": "",
+            "name": "국제 빈곤 퇴치의 날",
             "date": "2024-10-17"
         }
     },
@@ -2346,7 +2399,7 @@
         "model": "movies.Anniv",
         "pk": 292,
         "fields": {
-            "name": "",
+            "name": "세계 통계의 날",
             "date": "2024-10-18"
         }
     },
@@ -2394,7 +2447,7 @@
         "model": "movies.Anniv",
         "pk": 298,
         "fields": {
-            "name": "국제연합일",
+            "name": "국제연합일(유엔의 날)",
             "date": "2024-10-24"
         }
     },
@@ -2402,7 +2455,10 @@
         "model": "movies.Anniv",
         "pk": 299,
         "fields": {
-            "name": "",
+            "name": [
+                "독도의 날",
+                "세계 파스타의 날"
+            ],
             "date": "2024-10-25"
         }
     },
@@ -2450,7 +2506,7 @@
         "model": "movies.Anniv",
         "pk": 305,
         "fields": {
-            "name": "",
+            "name": "할로윈",
             "date": "2024-10-31"
         }
     },
@@ -2458,7 +2514,7 @@
         "model": "movies.Anniv",
         "pk": 306,
         "fields": {
-            "name": "",
+            "name": "세계 비건의 날",
             "date": "2024-11-01"
         }
     },
@@ -2474,7 +2530,10 @@
         "model": "movies.Anniv",
         "pk": 308,
         "fields": {
-            "name": "학생독립운동 기념일",
+            "name": [
+                "만화의 날",
+                "학생독립운동 기념일"
+            ],
             "date": "2024-11-03"
         }
     },
@@ -2498,7 +2557,7 @@
         "model": "movies.Anniv",
         "pk": 311,
         "fields": {
-            "name": "",
+            "name": "전쟁과 무력 충돌로 인한 환경 착취 국제 예방의 날",
             "date": "2024-11-06"
         }
     },
@@ -2530,7 +2589,7 @@
         "model": "movies.Anniv",
         "pk": 315,
         "fields": {
-            "name": "",
+            "name": "평화와 발전을 위한 세계 과학의 날",
             "date": "2024-11-10"
         }
     },
@@ -2554,7 +2613,7 @@
         "model": "movies.Anniv",
         "pk": 318,
         "fields": {
-            "name": "",
+            "name": "세계 친절의 날",
             "date": "2024-11-13"
         }
     },
@@ -2562,7 +2621,7 @@
         "model": "movies.Anniv",
         "pk": 319,
         "fields": {
-            "name": "",
+            "name": "세계 당뇨병의 날",
             "date": "2024-11-14"
         }
     },
@@ -2578,7 +2637,7 @@
         "model": "movies.Anniv",
         "pk": 321,
         "fields": {
-            "name": "",
+            "name": "국제 관용의 날",
             "date": "2024-11-16"
         }
     },
@@ -2586,7 +2645,10 @@
         "model": "movies.Anniv",
         "pk": 322,
         "fields": {
-            "name": "순국선열의 날",
+            "name": [
+                "순국선열의 날",
+                "세계 학생의 날"
+            ],
             "date": "2024-11-17"
         }
     },
@@ -2618,7 +2680,7 @@
         "model": "movies.Anniv",
         "pk": 326,
         "fields": {
-            "name": "",
+            "name": "세계 텔레비전의 날",
             "date": "2024-11-21"
         }
     },
@@ -2698,7 +2760,7 @@
         "model": "movies.Anniv",
         "pk": 336,
         "fields": {
-            "name": "",
+            "name": "세계 에이즈의 날",
             "date": "2024-12-01"
         }
     },
@@ -2730,7 +2792,10 @@
         "model": "movies.Anniv",
         "pk": 340,
         "fields": {
-            "name": "무역의 날",
+            "name": [
+                "무역의 날",
+                "세계 토양의 날"
+            ],
             "date": "2024-12-05"
         }
     },
@@ -2746,7 +2811,7 @@
         "model": "movies.Anniv",
         "pk": 342,
         "fields": {
-            "name": "",
+            "name": "국제 민간 항공의 날",
             "date": "2024-12-07"
         }
     },
@@ -2762,7 +2827,7 @@
         "model": "movies.Anniv",
         "pk": 344,
         "fields": {
-            "name": "",
+            "name": "국제 부패 반대의 날",
             "date": "2024-12-09"
         }
     },
@@ -2770,7 +2835,7 @@
         "model": "movies.Anniv",
         "pk": 345,
         "fields": {
-            "name": "",
+            "name": "인권의 날",
             "date": "2024-12-10"
         }
     },
@@ -2778,7 +2843,7 @@
         "model": "movies.Anniv",
         "pk": 346,
         "fields": {
-            "name": "",
+            "name": "국제 산의 날",
             "date": "2024-12-11"
         }
     },
@@ -2834,7 +2899,7 @@
         "model": "movies.Anniv",
         "pk": 353,
         "fields": {
-            "name": "",
+            "name": "국제 이주자의 날",
             "date": "2024-12-18"
         }
     },
@@ -2850,7 +2915,7 @@
         "model": "movies.Anniv",
         "pk": 355,
         "fields": {
-            "name": "",
+            "name": "국제 인간 연대의 날",
             "date": "2024-12-20"
         }
     },

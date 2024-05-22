@@ -7,6 +7,7 @@ import MovieDetail from "@/components/MovieDetail.vue";
 import MovieDetailPage from "@/components/MovieDetailPage.vue"
 import SignUpView from "@/views/SignUpView.vue";
 import LoginView from "@/views/LoginView.vue";
+import ReviewView from "@/views/ReviewView.vue"
 import { useCounterStore } from '@/stores/counter'
 
 const router = createRouter({
@@ -50,7 +51,12 @@ const router = createRouter({
     {
       path: "/movies/detail/:id",
       name: "movie_detail_page",
-      component: MovieDetailPage
+      component: MovieDetailPage,
+    },
+    { 
+      path: "/movies/detail/:id/rate",
+      name: "ReviewView",
+      component: ReviewView,
     }
   ],
 });
