@@ -21,7 +21,9 @@ import data from '@/fixtures/movies2.json'
 
     <div class="main_row1">
       <p class="main_subtitle">Today's Movie</p>
-      <img src="../img/movie4.jpeg" alt="home_movie_image" />
+      <RouterLink :to="{ name: 'movie_detail_page', params: { id : 271714 }}">
+        <img src="https://image.tmdb.org/t/p/w300/slLFGhzADsFdFzrrISsDo4X1Gwf.jpg" alt="home_movie_image" />
+      </RouterLink>
     </div>
     <span style="margin: 30px 0px;">---</span>
     <RouterLink :to="{ path: '/accounts' }">My Movie Data</RouterLink>
