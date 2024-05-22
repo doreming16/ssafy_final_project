@@ -22,39 +22,46 @@
 </template>
   
 <script setup>
-import axios from 'axios'
 import { onMounted, ref, defineProps } from 'vue'
 import { useCounterStore } from '@/stores/counter'
 import { useRouter } from 'vue-router'
+import axios from 'axios'
 
 const store = useCounterStore()
-const rating = ref(null)
-const content = ref(null)
+// const rating = ref(null)
+// const content = ref(null)
 const router = useRouter()
 
-onMounted(() => {
-    store.getReviews()
+const formData = ref({
+  movie: null,
+  user: null,
+  rating: null,
+  content: null,
+  created_at: null,
+  updated_at: null
 })
+
+// Read
+// onMounted(() => {
+//     store.getReviews()
+// })
 
 const props = defineProps({
   Id: Number
 })
-
+console.log(props)
 const createReview = function () {
   axios({
     method: 'post',
     url: `${store.API_URL}/detail/${props.Id}/reviews/`,
-    data: {
-      rating: rating.value,
-      content: content.value
-    },
+    data: formData.value,
     headers: {
-      Authorization: `Token ${store.token}`
+      Authorization: `Token ${store.token}`,
+      'Content-Type': 'application/json'
     }
   })
     .then((response) => {
-      // console.log(response.data)
-      router.push({ name: 'ReviewView' })
+      console.log(response.data)
     })
     .catch((error) => {
       console.log(error)

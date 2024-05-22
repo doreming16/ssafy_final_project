@@ -44,7 +44,7 @@
         "pk": 6,
         "fields": {
             "name": [
-                "콩의 날(미국)",
+                "콩의 날",
                 "세계 전쟁 고아의 날"
             ],
             "date": "2024-01-06"
@@ -62,7 +62,7 @@
         "model": "movies.Anniv",
         "pk": 8,
         "fields": {
-            "name": "",
+            "name": "지구 자전의 날",
             "date": "2024-01-08"
         }
     },
@@ -150,7 +150,7 @@
         "model": "movies.Anniv",
         "pk": 19,
         "fields": {
-            "name": "팝콘의 날(미국)",
+            "name": "팝콘의 날",
             "date": "2024-01-19"
         }
     },
@@ -590,7 +590,10 @@
         "model": "movies.Anniv",
         "pk": 74,
         "fields": {
-            "name": "강을 위한 국제 행동의 날",
+            "name": [
+                "강을 위한 국제 행동의 날",
+                "파이의 날"
+            ],
             "date": "2024-03-14"
         }
     },
@@ -935,7 +938,10 @@
         "model": "movies.Anniv",
         "pk": 116,
         "fields": {
-            "name": "법의 날",
+            "name": [
+                "법의 날",
+                "세계 펭귄의 날"
+            ],
             "date": "2024-04-25"
         }
     },
@@ -975,7 +981,7 @@
         "model": "movies.Anniv",
         "pk": 121,
         "fields": {
-            "name": "",
+            "name": "국제 재즈의 날",
             "date": "2024-04-30"
         }
     },
@@ -1482,7 +1488,7 @@
         "model": "movies.Anniv",
         "pk": 182,
         "fields": {
-            "name": "",
+            "name": "소행성의 날",
             "date": "2024-06-30"
         }
     },
@@ -1498,7 +1504,7 @@
         "model": "movies.Anniv",
         "pk": 184,
         "fields": {
-            "name": "",
+            "name": "세계 UFO의 날",
             "date": "2024-07-02"
         }
     },
