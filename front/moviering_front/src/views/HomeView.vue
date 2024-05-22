@@ -14,7 +14,7 @@ import data from '@/fixtures/movies2.json'
       </RouterLink>
     </div>
     
-    <div class="form_divide" style="margin: 30px 0px;">
+    <div class="form_divide" style="margin: 50px 0px;">
         ---
     </div>
       
@@ -22,16 +22,15 @@ import data from '@/fixtures/movies2.json'
     <div class="main_row1">
       <p class="main_subtitle">Today's Movie</p>
       <RouterLink :to="{ name: 'movie_detail_page', params: { id : 271714 }}">
-        <img src="https://image.tmdb.org/t/p/w300/slLFGhzADsFdFzrrISsDo4X1Gwf.jpg" alt="home_movie_image" />
+        <img id="todays_movie_img" src="https://image.tmdb.org/t/p/w300/slLFGhzADsFdFzrrISsDo4X1Gwf.jpg" alt="home_movie_image" />
       </RouterLink>
     </div>
-    <span style="margin: 30px 0px;">---</span>
+    <span style="margin: 80px 0px;">---</span>
     <RouterLink :to="{ path: '/accounts' }">My Movie Data</RouterLink>
-    <span style="margin: 30px 0px;">---</span>
-    <br />
+    <span style="margin: 80px 0px;">---</span>
     <RouterLink :to="{ path: '/movies' }">Movie Recommendation</RouterLink>
     <RouterView />
-    <span style="margin: 30px 0px;">---</span>
+    <span style="margin: 80px 0px;">---</span>
 
     <p class="main_subtitle">Movie List - ALL</p>
     <div class="movie_list_all" >
@@ -105,6 +104,9 @@ import data from '@/fixtures/movies2.json'
 }
 .main_subtitle{
   font-size: 20px;
+}
+#todays_movie_img{
+  width: 300px;
 }
 h1 {
   color: rgb(83, 123, 255);

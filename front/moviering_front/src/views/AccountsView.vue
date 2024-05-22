@@ -1,9 +1,12 @@
 <template>
   <div class="accounts_container">
-    <p style="margin-bottom: 70px;"><RouterLink :to="{ path: '/accounts' }" class="back_tag">back</RouterLink></p>
+    <p style="margin-bottom: 70px;"><RouterLink :to="{ path: '/' }" class="back_tag">back</RouterLink></p>
     <button class="userinfo_button" @click="toUserInfo">데이터 입력하기</button>
     
     <UserInfoDetail />
+
+    <p style="margin-bottom: 70px;"><RouterLink :to="{ path: '/' }" class="back_tag">영화 추천받기</RouterLink></p>
+      <!-- 개인 데이터 추천 페이지로 이동해야함 -->
 
     <RouterView />
   </div>
