@@ -14,82 +14,20 @@
     </div>
       
     <button class="userinfo_button" @click="toUserInfo">데이터 입력하기</button>
-    <h2 style="color: pink;">나의 영화 취향</h2>
-  
-    <div class="form_box" style="display: flex; justify-content: center; align-items: center;">
-      <span class="bracket_large">[</span>
-      <div v-for="info in userInfo">
-        <p v-if="info.isSpecial === true" class="info_item">
-          <!-- <span class="span_bracket">[</span> -->
-          기념일 관련 영화를 추천받고 싶어요
-          <!-- <span class="span_bracket">]</span> -->
-        </p>
-        <p v-if="info.isSpecial === false" class="info_item">
-          <!-- <span class="span_bracket">[</span> -->
-          기념일 관련 영화를 추천받고 싶지 않아요
-          <!-- <span class="span_bracket">]</span> -->
-        </p>
-
-        <p v-if="info.gender === 'male'" class="info_item">
-          <!-- <span class="span_bracket">[</span> -->
-          남성
-          <!-- <span class="span_bracket">]</span> -->
-        </p>
-        <p v-else class="info_item">
-          <!-- <span class="span_bracket">[</span>   -->
-          여성
-          <!-- <span class="span_bracket">]</span> -->
-        </p>
-
-        <p>
-          <span v-for="era in era_list">
-            <span v-if="era.eng === info.era" class="info_item">
-          <!-- <span class="span_bracket">[</span> -->
-              {{ era.kor }}
-          <!-- <span class="span_bracket">]</span> -->
-            </span>
-          </span>
-        </p>
-        
-        <p class="info_item">
-          <!-- <span class="span_bracket">[</span> -->
-          <!-- 선호 장르 _ -->
-          <span v-for="genre_pk in info.favorite_genre">
-            <span v-for="genre in data">
-              <span v-if="genre_pk === genre.pk" style="margin: 5px;">
-                {{ genre.fields.name }}
-              </span>
-            </span>
-          </span>
-          <!-- <span class="span_bracket">]</span> -->
-        </p>
-        
-        <p class="info_item">
-          <!-- <span class="span_bracket">[</span> -->
-          {{ info.viewing_environment }}
-          <!-- <span class="span_bracket">]</span> -->
-        </p>
-
-        <p class="info_item">
-          <!-- <span class="span_bracket">[</span> -->
-          {{ info.birthday }}
-          <!-- <span class="span_bracket">]</span> -->
-        </p>
-        
-      </div>
-      <span class="bracket_large">]</span>
-    </div>
-
+    
+    <UserInfoDetail />
+    
     <RouterView />
   </div>
 </template>
 
 <script setup>
 import { useRouter, RouterLink, RouterView } from "vue-router";
-import UserInfo from "@/components/UserInfo.vue";
+import UserInfoDetail from "@/components/UserInfoDetail.vue";
 import axios from 'axios';
 import { ref, onMounted } from 'vue';
 import data from '@/fixtures/genres.json'
+
 
 const router = useRouter();
 
