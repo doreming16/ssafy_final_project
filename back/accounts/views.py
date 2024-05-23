@@ -50,8 +50,3 @@ def get_userinfo_list(request):
         for info in userinfo  # List Comprehension
     ]
     return JsonResponse(data, safe=False)
-
-@login_required
-def get_user_id(request):
-    user_id = request.user.id
-    return JsonResponse({'userId': user_id})
