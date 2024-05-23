@@ -48,13 +48,14 @@ const router = useRouter()
 const props = defineProps({
   id: Number
 })
-const userId = ref(store.getuserId)
+
+
 // Read
 onMounted(() => {
     store.getReviews(props.id)
 })
 const reviews = ref(store.reviews)
-console.log(reviews)
+console.log(reviews.value)
 
 const createReview = function () {
   axios({

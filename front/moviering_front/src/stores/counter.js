@@ -23,7 +23,10 @@ export const useCounterStore = defineStore(
 
         axios({
           method: 'get',
-          url: `${API_URL}/movies/detail/${Id}/reviews/`
+          url: `${API_URL}/movies/detail/${Id}/reviews/`,
+          headers: {
+            Authorization: `Token ${token.value}`
+          },
         })
         .then(res => {
           // console.log(res)
@@ -140,7 +143,7 @@ export const useCounterStore = defineStore(
       get_user_profile();
     }
     
-    return { API_URL, signUp, logIn, token, isLogin, logOut, get_user_profile, user, getReviews};
+    return { API_URL, signUp, logIn, token, isLogin, logOut, get_user_profile, user, getReviews, reviews };
   },
   { persist: true }
 );
