@@ -15,16 +15,26 @@ onMounted(() => {
 
 const authToken = localStorage.getItem('authToken');
 
+const authUser = authstore.user
+
 </script>
 
 <template>
   <div class="container">
-    <div v-if="authstore.user">{{ authstore.user.username}}님</div>
+
+    <div v-if="authUser">
+      <p>
+        안녕하세요, {{ authUser.username }} 님.
+      </p>
+      <p>
+        {{ authUser.username }} 님의 user.id는 [ {{ authUser.id }} ] 입니다.
+      </p>
+    </div>
 
     <div style="display: flex;">  
 
       <!-- 로그인, 로그아웃 버튼 toggle -->
-      <div v-if="authstore.user">
+      <div v-if="authUser">
           <button @click="authstore.logOut" class="accounts_button">로그아웃</button>
       </div>
         
@@ -56,7 +66,9 @@ const authToken = localStorage.getItem('authToken');
     <span style="margin: 80px 0px;">---</span>
     <RouterLink :to="{ path: '/accounts' }">My Movie Data</RouterLink>
     <span style="margin: 80px 0px;">---</span>
-    <RouterLink :to="{ path: '/movies' }">Movie Recommendation</RouterLink>
+    
+    <RouterLink v-if="authUser" :to="{ path: `/movies/recommend/${authUser.id}` }">Recommendation for You</RouterLink>
+    <RouterLink v-else :to="{ path: '/movies/recommend/0' }">Please Login first</RouterLink>
     <RouterView />
     <span style="margin: 80px 0px;">---</span>
 
