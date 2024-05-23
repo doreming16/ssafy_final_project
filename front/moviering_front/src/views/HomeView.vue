@@ -18,6 +18,7 @@ const user = authstore.user
 </script>
 
 <template>
+  <p>You're in Comment Test Branch</p>
   <div class="container">
     <div v-if="user">{{ user.username }}님</div>
 

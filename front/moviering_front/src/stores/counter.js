@@ -3,10 +3,12 @@ import { defineStore } from "pinia";
 import axios from "axios";
 import { useRouter } from 'vue-router'
 
+
 export const useCounterStore = defineStore(
   "counter",
   () => {
     const images = ref([])
+    const reviews = ref([])
     const API_URL = "http://127.0.0.1:8000";
 
     const getImages = function () {
@@ -16,17 +18,32 @@ export const useCounterStore = defineStore(
       })
     }
 
+    const getReviews = function (Id) {
+      axios({
+        method: 'get',
+        url: `${API_URL}/movies/detail/${Id}/reviews/`
+      })
+      .then(res => {
+        // console.log(res)
+        // console.log(res.data)
+        reviews.value = res.data
+      })
+      .catch(err => console.log(err))
+    }
+
+    
+    
     // token 저장
     const token = ref(null);
-
+    
     const signUp = function (payload) {
       const username = payload.username;
       const password1 = payload.password1;
       const password2 = payload.password2;
-
+      
       // const { username, password, passwordcheck } = payload
-
-
+      
+      
       axios({
         method: "post",
         url: `${API_URL}/accounts/signup/`,
@@ -36,22 +53,46 @@ export const useCounterStore = defineStore(
           password2
         },
       })
-        .then((res) => {
-          console.log("회원가입 완료");
-          const password = password1
-          logIn({ username, password })
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      .then((res) => {
+        console.log("회원가입 완료");
+        const password = password1
+        logIn({ username, password })
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     };
+    
+    const userId = ref(null)
+
+    const fetchUserId = function () {
+      axios({
+        method: 'get',
+        url: `${API_URL}/accounts/get-user-id/`,
+        headers: {
+          Authorization: `Token ${token}`
+        }
+      })
+      .then((response) => {
+        userId.value = response.data.userId; // 사용자 ID를 저장
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+    }
+
+    fetchUserId()
+
+    const getUserId = computed(() => {
+      return userId.value
+    })
 
     const router = useRouter()  
-  
+    
     const logIn = function (payload) {
       const username = payload.username;
       const password = payload.password;
-
+      
       axios({
         method: "post",
         url: `${API_URL}/accounts/login/`,
@@ -60,8 +101,8 @@ export const useCounterStore = defineStore(
           password,
         },
       })
-        .then((res) => {
-          console.log("로그인 완료");
+      .then((res) => {
+        console.log("로그인 완료");
           console.log(res.data);
           token.value = res.data.key;
           // console.log(token.value)

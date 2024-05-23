@@ -17,7 +17,7 @@
         </div>
       </div>
 
-      <ReviewView />
+      <ReviewView :id="moviePk"/>
     </div>
   </template>
   
@@ -30,15 +30,15 @@
   import ReviewView from '@/views/ReviewView.vue'
   
   const route = useRoute()
-  const movie = ref('')
+  const movie = ref(null)
   for (const datum of data) {
     if (datum.pk == route.params.id) {
       movie.value = datum.fields
     }
   }
-  
-  const count_stars = ref(4);
-  </script>
+
+  const moviePk = ref(parseInt(route.params.id))
+</script>
   
   <style scoped>
   #go_back_link{
