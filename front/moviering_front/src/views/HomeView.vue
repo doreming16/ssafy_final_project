@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import data from '@/fixtures/movies2.json'
+import anniversary_recommend from '@/fixtures/anniversary_recommend.json'
 import { useCounterStore } from '@/stores/counter'
 import { onMounted } from "vue";
 
@@ -17,6 +18,20 @@ if (authstore.token) {
     authstore.get_user_profile()
   });
 }
+
+// 오늘 날짜를 가져오는 Date 객체 생성
+const today = new Date();
+
+// 연도, 월, 일을 추출
+const year = today.getFullYear();
+const month = String(today.getMonth() + 1).padStart(2, '0'); // 월은 0부터 시작하므로 +1
+const day = String(today.getDate()).padStart(2, '0'); // 날짜를 두 자리로 유지
+
+// 원하는 형식으로 조합
+const formattedDate = `${year}-${month}-${day}`;
+
+// console.log(formattedDate); // "2024-05-24" 형식으로 출력
+
 
 </script>
 
@@ -59,9 +74,17 @@ if (authstore.token) {
 
     <div class="main_row1">
       <p class="main_subtitle">Today's Movie</p>
-      <RouterLink :to="{ name: 'movie_detail_page', params: { id : 271714 }}">
-        <img id="todays_movie_img" src="https://image.tmdb.org/t/p/w300/slLFGhzADsFdFzrrISsDo4X1Gwf.jpg" alt="home_movie_image" />
-      </RouterLink>
+        <div v-for="anniversary in anniversary_recommend">
+          <div class="aniversary_movies" v-if="anniversary.date === formattedDate">
+            <div v-for="movie in anniversary.movies">
+              <RouterLink :to="{ name: 'movie_detail_page', params: { id : movie.pk }}">
+                <img id="todays_movie_img" :src="`https://image.tmdb.org/t/p/w300/${movie.poster_path}`" alt="home_movie_image" />
+              </RouterLink>
+            </div>
+            <p>오늘은 {{ anniversary.name }}입니다.</p>
+            <p>관련된 영화를 추천 드립니다.</p>
+          </div>
+        </div>
     </div>
     <span style="margin: 80px 0px;">---</span>
     <RouterLink v-if="authUser" :to="{ path: `/accounts/${authUser.id}` }">My Movie Data</RouterLink>
@@ -145,6 +168,9 @@ if (authstore.token) {
 }
 .main_subtitle{
   font-size: 20px;
+}
+.anniversary_movies{
+  display: inline-block;
 }
 #todays_movie_img{
   width: 300px;
