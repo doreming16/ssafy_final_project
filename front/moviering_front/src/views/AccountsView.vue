@@ -3,6 +3,7 @@
     <p style="margin-bottom: 70px;"><RouterLink :to="{ path: '/' }" class="back_tag">back</RouterLink></p>
     <button class="userinfo_button" @click="toUserInfo">Input My Data</button>
 
+
     <!-- {{ userInfo }} -->
 
     <UserInfoDetail

@@ -1,6 +1,7 @@
 <template>
   <div>
     <h2 v-if="store.user" style="color: pink;">{{ store.user.username }}님의 영화 취향</h2>
+    <!-- {{ userinfo }} -->
     <div class="form_box" style="display: flex; justify-content: center; align-items: center;">
         <div v-for="info in userInfo" class="info_box">
 
