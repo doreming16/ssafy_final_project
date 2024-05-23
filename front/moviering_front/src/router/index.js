@@ -60,7 +60,7 @@ const router = createRouter({
       component: MovieDetailPage,
       children: [
         { 
-          path: "/reviews",
+          path: "/movies/detail/:id/reviews",
           name: "ReviewView",
           component: ReviewView,
         }

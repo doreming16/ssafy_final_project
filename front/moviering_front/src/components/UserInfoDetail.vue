@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 v-if="store.user" style="color: pink;">{{ store.user.username }}님의 영화 취향</h2>
-
+    <!-- {{ userInfo }} -->
     
     <div class="form_box" style="display: flex; justify-content: center; align-items: center;">
         <div v-for="info in userInfo" class="info_box">
@@ -61,17 +61,22 @@
           class="back_tag">
         영화 추천받기
         </RouterLink>
+        
+        
+
       </p>
       <!-- 개인 데이터 추천 페이지로 이동해야함 -->
     </div>
   </template>
   
   <script setup>
-  import { useRouter, RouterLink, RouterView } from "vue-router";
-  import axios from 'axios';
+  import { useRouter, RouterLink, RouterView, routerKey } from "vue-router";
   import { ref, onMounted } from 'vue';
-  import data from '@/fixtures/genres.json'
   import { useCounterStore } from "@/stores/counter";
+  import axios from 'axios';
+
+  import data from '@/fixtures/genres.json'
+
   const store = useCounterStore()
 
   const era_list = [
@@ -118,6 +123,15 @@
       console.log(err)
     })
   };
+
+  const dataPush = function () {
+    router.push({
+      name: 'movies_recommend',
+      state: {
+        data: userInfo.value
+      }
+    })
+  }
 
   if (userInfo.length !== 0){
     onMounted(() => {

@@ -19,16 +19,19 @@ export const useCounterStore = defineStore(
     }
 
     const getReviews = function (Id) {
-      axios({
-        method: 'get',
-        url: `${API_URL}/movies/detail/${Id}/reviews/`
-      })
-      .then(res => {
-        // console.log(res)
-        // console.log(res.data)
-        reviews.value = res.data
-      })
-      .catch(err => console.log(err))
+      if (token.value) {
+
+        axios({
+          method: 'get',
+          url: `${API_URL}/movies/detail/${Id}/reviews/`
+        })
+        .then(res => {
+          // console.log(res)
+          // console.log(res.data)
+          reviews.value = res.data
+        })
+        .catch(err => console.log(err))
+      }
     }
 
     
@@ -62,30 +65,6 @@ export const useCounterStore = defineStore(
         console.log(err);
       });
     };
-    
-    const userId = ref(null)
-
-    const fetchUserId = function () {
-      axios({
-        method: 'get',
-        url: `${API_URL}/accounts/get-user-id/`,
-        headers: {
-          Authorization: `Token ${token}`
-        }
-      })
-      .then((response) => {
-        userId.value = response.data.userId; // 사용자 ID를 저장
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-    }
-
-    fetchUserId()
-
-    const getUserId = computed(() => {
-      return userId.value
-    })
 
     const router = useRouter()  
     
@@ -137,7 +116,7 @@ export const useCounterStore = defineStore(
       const authToken = localStorage.getItem('authToken');
       // console.log(authToken)
 
-      if (authToken){
+      if (authToken) {
 
         axios({
           method: 'get',
@@ -160,7 +139,7 @@ export const useCounterStore = defineStore(
       get_user_profile();
     }
     
-    return { API_URL, signUp, logIn, token, isLogin, logOut, get_user_profile, user};
+    return { API_URL, signUp, logIn, token, isLogin, logOut, get_user_profile, user, getReviews};
   },
   { persist: true }
 );
