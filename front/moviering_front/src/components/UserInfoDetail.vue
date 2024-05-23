@@ -1,7 +1,7 @@
 <template>
     <div>
       <h2 style="color: pink;">나의 영화 취향</h2>
-    
+
       <div class="form_box" style="display: flex; justify-content: center; align-items: center;">
         <span class="bracket_large">[</span>
         <div v-for="info in userInfo">
@@ -48,6 +48,15 @@
         </div>
         <span class="bracket_large">]</span>
       </div>
+
+      <p style="margin-bottom: 70px;">
+        <RouterLink
+          :to="{ path: '/movies/recommend/:id' }"
+          class="back_tag">
+        영화 추천받기
+        </RouterLink>
+      </p>
+      <!-- 개인 데이터 추천 페이지로 이동해야함 -->
     </div>
   </template>
   
@@ -125,5 +134,12 @@
     color: pink;
     margin: 0 25px;
   }
+  .back_tag{
+  color: white;
+  text-decoration: none;
+}
+.back_tag:hover{
+  color: pink;
+}
   </style>
   

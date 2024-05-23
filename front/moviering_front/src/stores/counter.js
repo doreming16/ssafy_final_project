@@ -65,11 +65,19 @@ export const useCounterStore = defineStore(
           console.log(res.data);
           token.value = res.data.key;
           // console.log(token.value)
+          localStorage.setItem('authToken', token.value); // Storage에 Token 저장
           router.push({ name : 'home' })
         })
         .catch((err) => {
           console.log(err);
         });
+    };
+
+    const logOut = function () {
+      localStorage.removeItem('authToken');
+      token.value = null;
+      console.log('로그아웃 완료');
+      router.push({ name : 'home'});
     };
 
     const isLogin = computed(() => {
@@ -79,7 +87,7 @@ export const useCounterStore = defineStore(
         return true
       }
     })
-    return { API_URL, signUp, logIn, token, isLogin };
+    return { API_URL, signUp, logIn, token, isLogin, logOut };
   },
   { persist: true }
 );

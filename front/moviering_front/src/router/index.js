@@ -8,6 +8,7 @@ import MovieDetailPage from "@/components/MovieDetailPage.vue"
 import SignUpView from "@/views/SignUpView.vue";
 import LoginView from "@/views/LoginView.vue";
 import ReviewView from "@/views/ReviewView.vue"
+import MovieRecommendView from '@/views/MovieRecommendView.vue'
 import { useCounterStore } from '@/stores/counter'
 
 const router = createRouter({
@@ -37,6 +38,11 @@ const router = createRouter({
       path: "/accounts/userinfo",
       name: "userinfo",
       component: UserInfo,
+    },
+    {
+      path: "/movies/recommend/:id",
+      name: "movies_recommend",
+      component: MovieRecommendView,
     },
     {
       path: "/movies",

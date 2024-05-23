@@ -1,6 +1,6 @@
 <template>
   <div class="signup_container">
-    <RouterLink :to="{ path: '/accounts' }">back</RouterLink>
+    <RouterLink :to="{ path: '/' }">back</RouterLink>
     <h1>Sign Up Page</h1>
     <form @submit.prevent="signUp">
       <label for="username">username : </label>

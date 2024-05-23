@@ -5,9 +5,6 @@
     
     <UserInfoDetail />
 
-    <p style="margin-bottom: 70px;"><RouterLink :to="{ path: '/' }" class="back_tag">영화 추천받기</RouterLink></p>
-      <!-- 개인 데이터 추천 페이지로 이동해야함 -->
-
     <RouterView />
   </div>
 </template>
@@ -98,9 +95,6 @@ onMounted(() => {
   background-color: transparent;
   margin: 30px 0 50px 0;
   cursor: pointer;
-}
-.back_tag:hover{
-  color: pink;
 }
 .userinfo_button:hover{
   background-color: pink;

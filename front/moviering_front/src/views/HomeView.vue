@@ -1,17 +1,35 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import data from '@/fixtures/movies2.json'
+import { useCounterStore } from '@/stores/counter'
+
+const authstore = useCounterStore()
+
+const logOut = () => {
+  authstore.logOut()
+}
 </script>
 
 <template>
   <div class="container">
-    <div>
-      <RouterLink :to="{ path: '/accounts/login' }">
-        <button class="accounts_button">로그인</button>
-      </RouterLink>
-      <RouterLink :to="{ path: '/accounts/signup' }">
-        <button class="accounts_button">회원가입</button>
-      </RouterLink>
+    <div style="display: flex;">
+      
+      <div v-if="authstore.token">
+          <button @click="authstore.logOut" class="accounts_button">로그아웃</button>
+      </div>
+        
+      <div v-else>
+        <RouterLink :to="{ path: '/accounts/login' }">
+          <button class="accounts_button">로그인</button>
+        </RouterLink>
+      </div>
+        
+      <div>
+        <RouterLink :to="{ path: '/accounts/signup' }">
+          <button class="accounts_button">회원가입</button>
+        </RouterLink>
+      </div>
+
     </div>
     
     <div class="form_divide" style="margin: 50px 0px;">
