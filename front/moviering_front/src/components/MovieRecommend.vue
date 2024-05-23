@@ -72,7 +72,7 @@
             const new_year = parseInt(release_year, 10)
 
             if (new_year >= 1970 && new_year < 1980){
-                movielist_filtered.value.push(toString(new_year))
+                movielist_filtered.value.push(movie)
             }
         }
     }
