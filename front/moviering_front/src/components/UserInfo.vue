@@ -4,11 +4,21 @@
 
     <h1>UserInfoForm</h1>
     <UserInfoForm />
+
+    <p style="margin-bottom: 70px;">
+        <RouterLink
+          :to="{ path: '/movies/recommend/:id' }"
+          class="back_tag">
+        영화 추천받기
+        </RouterLink>
+    </p>
   </div>
 </template>
 
 <script setup>
 import UserInfoForm from "@/components/UserInfoForm.vue";
+import { RouterLink } from 'vue-router'
+
 </script>
 
 <style scoped>

@@ -65,11 +65,11 @@ const authUser = authstore.user
     </div>
     <span style="margin: 80px 0px;">---</span>
     <RouterLink v-if="authUser" :to="{ path: `/accounts/${authUser.id}` }">My Movie Data</RouterLink>
-    <RouterLink v-else :to="{ path: '/accounts/signup' }">Please Login First</RouterLink>
+    <RouterLink v-else :to="{ path: '/accounts/login' }">Please Login First</RouterLink>
     <span style="margin: 80px 0px;">---</span>
     
     <RouterLink v-if="authUser" :to="{ path: `/movies/recommend/${authUser.id}` }">Recommendation for You</RouterLink>
-    <RouterLink v-else :to="{ path: '/movies/recommend/0' }">Please Login First</RouterLink>
+    <RouterLink v-else :to="{ path: '/accounts/login' }">Please Login First</RouterLink>
     <RouterView />
     <span style="margin: 80px 0px;">---</span>
 
