@@ -5,27 +5,38 @@ import { useCounterStore } from '@/stores/counter'
 import { onMounted } from "vue";
 
 const authstore = useCounterStore()
+const authUser = authstore.user
 
 const logOut = () => {
   authstore.logOut()
 }
-onMounted(() => {
-  authstore.get_user_profile()
-});
 
-const user = authstore.user
+if (authstore.token) {
+  onMounted(() => {
+    authstore.get_user_profile()
+  });
+}
+
 
 </script>
 
 <template>
   <p>You're in Comment Test Branch</p>
   <div class="container">
-    <div v-if="user">{{ user.username }}님</div>
+
+    <div v-if="authUser">
+      <p>
+        안녕하세요, {{ authUser.username }} 님.
+      </p>
+      <p>
+        {{ authUser.username }} 님의 user.id는 [ {{ authUser.id }} ] 입니다.
+      </p>
+    </div>
 
     <div style="display: flex;">  
 
       <!-- 로그인, 로그아웃 버튼 toggle -->
-      <div v-if="authstore.token">
+      <div v-if="authUser">
           <button @click="authstore.logOut" class="accounts_button">로그아웃</button>
       </div>
         
@@ -55,9 +66,12 @@ const user = authstore.user
       </RouterLink>
     </div>
     <span style="margin: 80px 0px;">---</span>
-    <RouterLink :to="{ path: '/accounts' }">My Movie Data</RouterLink>
+    <RouterLink v-if="authUser" :to="{ path: `/accounts/${authUser.id}` }">My Movie Data</RouterLink>
+    <RouterLink v-else :to="{ path: '/accounts/login' }">Please Login First</RouterLink>
     <span style="margin: 80px 0px;">---</span>
-    <RouterLink :to="{ path: '/movies' }">Movie Recommendation</RouterLink>
+    
+    <RouterLink v-if="authUser" :to="{ path: `/movies/recommend/${authUser.id}` }">Recommendation for You</RouterLink>
+    <RouterLink v-else :to="{ path: '/accounts/login' }">Please Login First</RouterLink>
     <RouterView />
     <span style="margin: 80px 0px;">---</span>
 

@@ -20,7 +20,7 @@ const router = createRouter({
       component: Home,
     },
     {
-      path: "/accounts",
+      path: "/accounts/:id",
       name: "accounts",
       component: Accounts,
     },

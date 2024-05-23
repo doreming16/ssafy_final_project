@@ -113,10 +113,13 @@ export const useCounterStore = defineStore(
           console.log(err);
         });
     };
+    
+    const user = ref(null);
 
     const logOut = function () {
       localStorage.removeItem('authToken');
       token.value = null;
+      user.value = null;
       console.log('로그아웃 완료');
       router.push({ name : 'home'});
     };
@@ -129,7 +132,6 @@ export const useCounterStore = defineStore(
       }
     });
 
-    const user = ref(null);
 
     const get_user_profile = function () {
       const authToken = localStorage.getItem('authToken');
@@ -146,7 +148,7 @@ export const useCounterStore = defineStore(
         }).then(res => {
           user.value = res.data;
           console.log('user_profile 가져오기 완료')
-          console.log(user.value);
+          console.log(user.value.username);
         }).catch(err => {
           console.log(err);
         });

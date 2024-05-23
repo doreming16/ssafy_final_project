@@ -142,6 +142,11 @@
 import { ref, watch, computed } from 'vue';
 import data from '@/fixtures/genres.json';
 import axios from 'axios';
+import { useCounterStore } from '@/stores/counter'
+
+const store = useCounterStore()
+console.log(store.user.id)
+console.log('here')
 
 const formData  = ref({
   isSpecial: undefined,
