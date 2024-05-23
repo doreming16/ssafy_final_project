@@ -1,9 +1,12 @@
 <template>
-    <div>
-      <h2 v-if="store.user" style="color: pink;">{{ store.user.username }}님의 영화 취향</h2>
+  <div>
+    <h2 v-if="store.user" style="color: pink;">{{ store.user.username }}님의 영화 취향</h2>
 
-      <div class="form_box" style="display: flex; justify-content: center; align-items: center;">
-        <span class="bracket_large">[</span>
+    
+    
+    <div class="form_box" style="display: flex; justify-content: center; align-items: center;">
+      <span class="bracket_large">[</span>
+      <div class="ifUserInfo">
         <div v-for="info in userInfo">
           <p v-if="info.isSpecial === true" class="info_item">
             기념일 관련 영화를 추천받고 싶어요
@@ -44,6 +47,7 @@
           <p class="info_item">
             {{ info.birthday }}
           </p>
+      </div>
           
         </div>
         <span class="bracket_large">]</span>
@@ -111,12 +115,14 @@
     }).catch(err =>{
       console.log(err)
     })
-  }
-  
-  onMounted(() => {
-    getUserInfo()
-  });
-  
+  };
+
+  if (userInfo.length === 0){
+    onMounted(() => {
+      getUserInfo()
+    });
+  };
+
   </script>
   
   <style scoped>

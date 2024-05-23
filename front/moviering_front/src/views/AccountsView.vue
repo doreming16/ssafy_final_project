@@ -66,11 +66,14 @@ const getUserInfo = function () {
   }).catch(err =>{
     console.log(err)
   })
-}
+};
 
-onMounted(() => {
-  getUserInfo()
-});
+if (userInfo.length === 0){
+    onMounted(() => {
+      getUserInfo()
+    });
+};
+  
 
 </script>
 
