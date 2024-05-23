@@ -5,17 +5,18 @@ import { useCounterStore } from '@/stores/counter'
 import { onMounted } from "vue";
 
 const authstore = useCounterStore()
+const authUser = authstore.user
 
 const logOut = () => {
   authstore.logOut()
 }
-onMounted(() => {
-  authstore.get_user_profile()
-});
 
-const authToken = localStorage.getItem('authToken');
+if (authstore.token) {
+  onMounted(() => {
+    authstore.get_user_profile()
+  });
+}
 
-const authUser = authstore.user
 
 </script>
 
