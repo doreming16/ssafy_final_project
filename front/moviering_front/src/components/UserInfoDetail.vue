@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h2 style="color: pink;">나의 영화 취향</h2>
+      <h2 v-if="store.user" style="color: pink;">{{ store.user.username }}님의 영화 취향</h2>
 
       <div class="form_box" style="display: flex; justify-content: center; align-items: center;">
         <span class="bracket_large">[</span>
@@ -65,6 +65,8 @@
   import axios from 'axios';
   import { ref, onMounted } from 'vue';
   import data from '@/fixtures/genres.json'
+  import { useCounterStore } from "@/stores/counter";
+  const store = useCounterStore()
 
   const era_list = [
     {

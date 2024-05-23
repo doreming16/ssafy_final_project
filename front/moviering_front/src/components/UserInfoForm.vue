@@ -142,8 +142,11 @@
 import { ref, watch, computed } from 'vue';
 import data from '@/fixtures/genres.json';
 import axios from 'axios';
+import { useCounterStore } from '@/stores/counter'
+
 
 const formData  = ref({
+  // user_id: ,
   isSpecial: undefined,
   gender: '',
   era: '',
