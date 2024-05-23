@@ -6,12 +6,11 @@ import { onMounted } from "vue";
 
 const authstore = useCounterStore()
 const authUser = authstore.user
+const authToken = localStorage.getItem('authToken')
 
 const logOut = () => {
   authstore.logOut()
 }
-
-const authToken = localStorage.getItem('authToken')
 
 if (authstore.token) {
   onMounted(() => {
@@ -19,12 +18,10 @@ if (authstore.token) {
   });
 }
 
-
 </script>
 
 <template>
   <div class="container">
-
     <div v-if="authUser">
       <p>
         안녕하세요, {{ authUser.username }} 님.

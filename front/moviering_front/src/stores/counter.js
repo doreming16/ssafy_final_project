@@ -67,6 +67,8 @@ export const useCounterStore = defineStore(
     };
 
     const router = useRouter()  
+
+    const user = ref(null);
     
     const logIn = function (payload) {
       const username = payload.username;
@@ -93,7 +95,6 @@ export const useCounterStore = defineStore(
         });
     };
     
-    const user = ref(null);
 
     const logOut = function () {
       localStorage.removeItem('authToken');

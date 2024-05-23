@@ -2,8 +2,16 @@
   <div class="accounts_container">
     <p style="margin-bottom: 70px;"><RouterLink :to="{ path: '/' }" class="back_tag">back</RouterLink></p>
     <button class="userinfo_button" @click="toUserInfo">Input My Data</button>
-    
-    <UserInfoDetail />
+
+    <!-- {{ userInfo }} -->
+
+    <UserInfoDetail
+    :userinfo="userInfo"
+    />
+
+    <MovieRecommend
+    :userinfo="userInfo"
+     />
 
     <RouterView />
   </div>
@@ -11,11 +19,12 @@
 
 <script setup>
 import { useRouter, RouterLink, RouterView } from "vue-router";
-import UserInfoDetail from "@/components/UserInfoDetail.vue";
-import axios from 'axios';
 import { ref, onMounted } from 'vue';
+import axios from 'axios';
+import UserInfoDetail from "@/components/UserInfoDetail.vue";
+import MovieRecommend from "@/components/MovieRecommend.vue";
 import data from '@/fixtures/genres.json'
-
+import { useCounterStore } from "@/stores/counter";
 
 const router = useRouter();
 
@@ -68,7 +77,7 @@ const getUserInfo = function () {
   })
 };
 
-if (userInfo.length === 0){
+if (userInfo.length !== 0){
     onMounted(() => {
       getUserInfo()
     });
