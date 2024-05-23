@@ -13,18 +13,18 @@ onMounted(() => {
   authstore.get_user_profile()
 });
 
-const user = authstore.user
+const authToken = localStorage.getItem('authToken');
 
 </script>
 
 <template>
   <div class="container">
-    <div v-if="user">{{ user.username }}님</div>
+    <div v-if="authstore.user">{{ authstore.user.username}}님</div>
 
     <div style="display: flex;">  
 
       <!-- 로그인, 로그아웃 버튼 toggle -->
-      <div v-if="authstore.token">
+      <div v-if="authstore.user">
           <button @click="authstore.logOut" class="accounts_button">로그아웃</button>
       </div>
         
