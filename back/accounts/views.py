@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_list_or_404
-from rest_framework.decorators import authentication_classes
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.authentication import TokenAuthentication, BasicAuthentication
 
 from django.views.decorators.csrf import csrf_exempt
@@ -7,15 +7,12 @@ from django.http import JsonResponse
 import json
 
 from .models import UserInfo
-from .serializers import UserInfoSerializer
+from .serializers import UserSerializer
+from django.contrib.auth.models import User
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 
 # @authentication_classes([TokenAuthentication, BasicAuthentication])
-# Create your views here.
-def login(request):
-    pass
-
-def signup(request):
-    pass
 
 @csrf_exempt
 def submit_form(request):
@@ -48,3 +45,10 @@ def get_userinfo_list(request):
         for info in userinfo  # List Comprehension
     ]
     return JsonResponse(data, safe=False)
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_user_profile(request):
+    user = request.user
+    serializer = UserSerializer(user)
+    return Response(serializer.data)

@@ -86,8 +86,38 @@ export const useCounterStore = defineStore(
       } else {
         return true
       }
-    })
-    return { API_URL, signUp, logIn, token, isLogin, logOut };
+    });
+
+    const user = ref(null);
+
+    const get_user_profile = function () {
+      const authToken = localStorage.getItem('authToken');
+      // console.log(authToken)
+
+      if (authToken){
+
+        axios({
+          method: 'get',
+          url: `${API_URL}/accounts/profile/`,
+          headers: {
+            Authorization: `Token ${authToken}`
+          },
+        }).then(res => {
+          user.value = res.data;
+          console.log('user_profile 가져오기 완료')
+          console.log(user.value);
+        }).catch(err => {
+          console.log(err);
+        });
+
+      }
+    }
+
+    if (token.value) {
+      get_user_profile();
+    }
+    
+    return { API_URL, signUp, logIn, token, isLogin, logOut, get_user_profile, user};
   },
   { persist: true }
 );

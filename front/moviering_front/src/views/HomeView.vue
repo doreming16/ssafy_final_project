@@ -2,18 +2,28 @@
 import { RouterLink, RouterView } from "vue-router";
 import data from '@/fixtures/movies2.json'
 import { useCounterStore } from '@/stores/counter'
+import { onMounted } from "vue";
 
 const authstore = useCounterStore()
 
 const logOut = () => {
   authstore.logOut()
 }
+onMounted(() => {
+  authstore.get_user_profile()
+});
+
+const user = authstore.user
+
 </script>
 
 <template>
   <div class="container">
-    <div style="display: flex;">
-      
+    <div v-if="user">{{ user.username }}님</div>
+
+    <div style="display: flex;">  
+
+      <!-- 로그인, 로그아웃 버튼 toggle -->
       <div v-if="authstore.token">
           <button @click="authstore.logOut" class="accounts_button">로그아웃</button>
       </div>
