@@ -57,7 +57,7 @@
 
       <p style="margin-bottom: 70px;">
         <RouterLink
-          :to="{ path: '/movies/recommend/:id' }"
+          :to="{ path: `/movies/recommend/${store.user.id}` }"
           class="back_tag">
         영화 추천받기
         </RouterLink>
