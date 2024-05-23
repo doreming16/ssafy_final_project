@@ -21,7 +21,6 @@ if (authstore.token) {
 </script>
 
 <template>
-  <p>You're in Comment Test Branch</p>
   <div class="container">
 
     <div v-if="authUser">
