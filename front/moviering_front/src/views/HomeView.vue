@@ -11,6 +11,8 @@ const logOut = () => {
   authstore.logOut()
 }
 
+const authToken = localStorage.getItem('authToken')
+
 if (authstore.token) {
   onMounted(() => {
     authstore.get_user_profile()
@@ -35,8 +37,8 @@ if (authstore.token) {
     <div style="display: flex;">  
 
       <!-- 로그인, 로그아웃 버튼 toggle -->
-      <div v-if="authUser">
-          <button @click="authstore.logOut" class="accounts_button">로그아웃</button>
+      <div v-if="authToken">
+          <button @click="logOut" class="accounts_button">로그아웃</button>
       </div>
         
       <div v-else>
