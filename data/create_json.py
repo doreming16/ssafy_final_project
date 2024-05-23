@@ -3,7 +3,7 @@ import requests
 from datetime import datetime, timedelta
 
 # TMDB api key
-API_KEY = '69eed7b4b995f1ec37fd823f0c0aeae8'
+API_KEY = '이곳에 TMBD API KEY를 입력하세요.'
 
 # top_rated_movie 전체 출력 테스트
 def popular(page):
