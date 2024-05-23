@@ -35,7 +35,7 @@
         "model": "movies.Anniv",
         "pk": 5,
         "fields": {
-            "name": "",
+            "name": "시나리오 작가의 날",
             "date": "2024-01-05"
         }
     },
@@ -54,7 +54,7 @@
         "model": "movies.Anniv",
         "pk": 7,
         "fields": {
-            "name": "",
+            "name": "튀김의 날",
             "date": "2024-01-07"
         }
     },
@@ -70,7 +70,7 @@
         "model": "movies.Anniv",
         "pk": 9,
         "fields": {
-            "name": "",
+            "name": "세계 안무가의 날",
             "date": "2024-01-09"
         }
     },
@@ -78,7 +78,7 @@
         "model": "movies.Anniv",
         "pk": 10,
         "fields": {
-            "name": "",
+            "name": "독수리를 지켜주세요 날",
             "date": "2024-01-10"
         }
     },
@@ -86,7 +86,7 @@
         "model": "movies.Anniv",
         "pk": 11,
         "fields": {
-            "name": "",
+            "name": "우유의 날",
             "date": "2024-01-11"
         }
     },
@@ -94,7 +94,7 @@
         "model": "movies.Anniv",
         "pk": 12,
         "fields": {
-            "name": "",
+            "name": "키스 어 진저 데이",
             "date": "2024-01-12"
         }
     },
@@ -102,7 +102,7 @@
         "model": "movies.Anniv",
         "pk": 13,
         "fields": {
-            "name": "",
+            "name": "러버덕의 날",
             "date": "2024-01-13"
         }
     },
@@ -118,7 +118,10 @@
         "model": "movies.Anniv",
         "pk": 15,
         "fields": {
-            "name": "",
+            "name": [
+                "마틴 루터 킹의 날",
+                "베이글의 날"
+            ],
             "date": "2024-01-15"
         }
     },
@@ -134,7 +137,7 @@
         "model": "movies.Anniv",
         "pk": 17,
         "fields": {
-            "name": "",
+            "name": "휘핑 크림의 날",
             "date": "2024-01-17"
         }
     },
@@ -142,7 +145,7 @@
         "model": "movies.Anniv",
         "pk": 18,
         "fields": {
-            "name": "",
+            "name": "동의어 사전의 날",
             "date": "2024-01-18"
         }
     },
@@ -158,7 +161,7 @@
         "model": "movies.Anniv",
         "pk": 20,
         "fields": {
-            "name": "",
+            "name": "국제 수용의 날",
             "date": "2024-01-20"
         }
     },
@@ -166,7 +169,7 @@
         "model": "movies.Anniv",
         "pk": 21,
         "fields": {
-            "name": "",
+            "name": "히알루론산의 날",
             "date": "2024-01-21"
         }
     },
@@ -174,7 +177,7 @@
         "model": "movies.Anniv",
         "pk": 22,
         "fields": {
-            "name": "",
+            "name": "삶에 대한 축하의 날",
             "date": "2024-01-22"
         }
     },
@@ -182,7 +185,7 @@
         "model": "movies.Anniv",
         "pk": 23,
         "fields": {
-            "name": "",
+            "name": "손글씨의 날",
             "date": "2024-01-23"
         }
     },
@@ -190,7 +193,7 @@
         "model": "movies.Anniv",
         "pk": 24,
         "fields": {
-            "name": "",
+            "name": "세계 배꼽 잡고 웃는 날",
             "date": "2024-01-24"
         }
     },
@@ -198,7 +201,7 @@
         "model": "movies.Anniv",
         "pk": 25,
         "fields": {
-            "name": "",
+            "name": "번스 만찬",
             "date": "2024-01-25"
         }
     },
@@ -206,7 +209,7 @@
         "model": "movies.Anniv",
         "pk": 26,
         "fields": {
-            "name": "",
+            "name": "그린 주스의 날",
             "date": "2024-01-26"
         }
     },
@@ -222,7 +225,7 @@
         "model": "movies.Anniv",
         "pk": 28,
         "fields": {
-            "name": "",
+            "name": "국제 지역사회 참여의 날",
             "date": "2024-01-28"
         }
     },
@@ -230,7 +233,7 @@
         "model": "movies.Anniv",
         "pk": 29,
         "fields": {
-            "name": "",
+            "name": "퍼즐의 날",
             "date": "2024-01-29"
         }
     },
@@ -238,7 +241,7 @@
         "model": "movies.Anniv",
         "pk": 30,
         "fields": {
-            "name": "",
+            "name": "크로아상의 날",
             "date": "2024-01-30"
         }
     },
@@ -246,7 +249,7 @@
         "model": "movies.Anniv",
         "pk": 31,
         "fields": {
-            "name": "",
+            "name": "반대로 생각해보는 날",
             "date": "2024-01-31"
         }
     },
@@ -286,7 +289,7 @@
         "model": "movies.Anniv",
         "pk": 36,
         "fields": {
-            "name": "",
+            "name": "친구와 함께 샤워하는 날",
             "date": "2024-02-05"
         }
     },
@@ -302,7 +305,7 @@
         "model": "movies.Anniv",
         "pk": 38,
         "fields": {
-            "name": "",
+            "name": "e의 날",
             "date": "2024-02-07"
         }
     },
@@ -310,7 +313,7 @@
         "model": "movies.Anniv",
         "pk": 39,
         "fields": {
-            "name": "",
+            "name": "연 날리기의 날",
             "date": "2024-02-08"
         }
     },
@@ -318,7 +321,7 @@
         "model": "movies.Anniv",
         "pk": 40,
         "fields": {
-            "name": "",
+            "name": "피자의 날",
             "date": "2024-02-09"
         }
     },
@@ -326,7 +329,7 @@
         "model": "movies.Anniv",
         "pk": 41,
         "fields": {
-            "name": "",
+            "name": "크림치즈 브라우니의 날",
             "date": "2024-02-10"
         }
     },
@@ -342,7 +345,7 @@
         "model": "movies.Anniv",
         "pk": 43,
         "fields": {
-            "name": "",
+            "name": "미국 대통령의 날",
             "date": "2024-02-12"
         }
     },
@@ -350,7 +353,7 @@
         "model": "movies.Anniv",
         "pk": 44,
         "fields": {
-            "name": "",
+            "name": "갈렌타인데이",
             "date": "2024-02-13"
         }
     },
@@ -374,7 +377,7 @@
         "model": "movies.Anniv",
         "pk": 47,
         "fields": {
-            "name": "",
+            "name": "괴팍한 사람에게 친절을 베푸는 날",
             "date": "2024-02-16"
         }
     },
@@ -382,7 +385,7 @@
         "model": "movies.Anniv",
         "pk": 48,
         "fields": {
-            "name": "",
+            "name": "묻지마 친절의 날",
             "date": "2024-02-17"
         }
     },
@@ -390,7 +393,7 @@
         "model": "movies.Anniv",
         "pk": 49,
         "fields": {
-            "name": "",
+            "name": "와인 마시는 날",
             "date": "2024-02-18"
         }
     },
@@ -398,7 +401,7 @@
         "model": "movies.Anniv",
         "pk": 50,
         "fields": {
-            "name": "",
+            "name": "민트초코의 날",
             "date": "2024-02-19"
         }
     },
@@ -422,7 +425,7 @@
         "model": "movies.Anniv",
         "pk": 53,
         "fields": {
-            "name": "",
+            "name": "슈퍼마켓 종업원의 날",
             "date": "2024-02-22"
         }
     },
@@ -438,7 +441,7 @@
         "model": "movies.Anniv",
         "pk": 55,
         "fields": {
-            "name": "",
+            "name": "세계 바텐더의 날",
             "date": "2024-02-24"
         }
     },
@@ -446,7 +449,7 @@
         "model": "movies.Anniv",
         "pk": 56,
         "fields": {
-            "name": "",
+            "name": "클램 차우더 스프의 날",
             "date": "2024-02-25"
         }
     },
@@ -454,7 +457,7 @@
         "model": "movies.Anniv",
         "pk": 57,
         "fields": {
-            "name": "",
+            "name": "모범이 되는 행동의 날",
             "date": "2024-02-26"
         }
     },
@@ -478,7 +481,7 @@
         "model": "movies.Anniv",
         "pk": 60,
         "fields": {
-            "name": "",
+            "name": "시간 환불의 날",
             "date": "2024-02-29"
         }
     },
@@ -494,7 +497,7 @@
         "model": "movies.Anniv",
         "pk": 62,
         "fields": {
-            "name": "",
+            "name": "오래된 물건의 날",
             "date": "2024-03-02"
         }
     },
@@ -510,7 +513,7 @@
         "model": "movies.Anniv",
         "pk": 64,
         "fields": {
-            "name": "",
+            "name": "행진 음악의 날",
             "date": "2024-03-04"
         }
     },
@@ -518,7 +521,7 @@
         "model": "movies.Anniv",
         "pk": 65,
         "fields": {
-            "name": "",
+            "name": "압생트의 날",
             "date": "2024-03-05"
         }
     },
@@ -526,7 +529,7 @@
         "model": "movies.Anniv",
         "pk": 66,
         "fields": {
-            "name": "",
+            "name": "드레스의 날",
             "date": "2024-03-06"
         }
     },
@@ -534,7 +537,7 @@
         "model": "movies.Anniv",
         "pk": 67,
         "fields": {
-            "name": "",
+            "name": "시리얼의 날",
             "date": "2024-03-07"
         }
     },
@@ -550,7 +553,7 @@
         "model": "movies.Anniv",
         "pk": 69,
         "fields": {
-            "name": "",
+            "name": "극복의 날",
             "date": "2024-03-09"
         }
     },
@@ -558,7 +561,7 @@
         "model": "movies.Anniv",
         "pk": 70,
         "fields": {
-            "name": "",
+            "name": "국제 멋짐의 날",
             "date": "2024-03-10"
         }
     },
@@ -574,7 +577,7 @@
         "model": "movies.Anniv",
         "pk": 72,
         "fields": {
-            "name": "",
+            "name": "걸 스카우트의 날",
             "date": "2024-03-12"
         }
     },
@@ -582,7 +585,7 @@
         "model": "movies.Anniv",
         "pk": 73,
         "fields": {
-            "name": "",
+            "name": "귀도리의 날",
             "date": "2024-03-13"
         }
     },
@@ -612,7 +615,7 @@
         "model": "movies.Anniv",
         "pk": 76,
         "fields": {
-            "name": "",
+            "name": "니가 하는건 뭐든지 옳은 날",
             "date": "2024-03-16"
         }
     },
@@ -636,7 +639,7 @@
         "model": "movies.Anniv",
         "pk": 79,
         "fields": {
-            "name": "",
+            "name": "뒷마당의 날",
             "date": "2024-03-19"
         }
     },
@@ -701,7 +704,7 @@
         "model": "movies.Anniv",
         "pk": 86,
         "fields": {
-            "name": "",
+            "name": "시금치의 날",
             "date": "2024-03-26"
         }
     },
@@ -709,7 +712,7 @@
         "model": "movies.Anniv",
         "pk": 87,
         "fields": {
-            "name": "",
+            "name": "세계 영화관의 날",
             "date": "2024-03-27"
         }
     },
@@ -725,7 +728,7 @@
         "model": "movies.Anniv",
         "pk": 89,
         "fields": {
-            "name": "",
+            "name": "세계 피아노의 날",
             "date": "2024-03-29"
         }
     },
@@ -733,7 +736,7 @@
         "model": "movies.Anniv",
         "pk": 90,
         "fields": {
-            "name": "",
+            "name": "나를 통제하는 날",
             "date": "2024-03-30"
         }
     },
@@ -741,7 +744,7 @@
         "model": "movies.Anniv",
         "pk": 91,
         "fields": {
-            "name": "",
+            "name": "분젠 버너의 날",
             "date": "2024-03-31"
         }
     },
@@ -789,7 +792,7 @@
         "model": "movies.Anniv",
         "pk": 97,
         "fields": {
-            "name": "",
+            "name": "까르보나라의 날",
             "date": "2024-04-06"
         }
     },
@@ -805,7 +808,7 @@
         "model": "movies.Anniv",
         "pk": 99,
         "fields": {
-            "name": "",
+            "name": "동물원 애호가의 날",
             "date": "2024-04-08"
         }
     },
@@ -813,7 +816,7 @@
         "model": "movies.Anniv",
         "pk": 100,
         "fields": {
-            "name": "",
+            "name": "유니콘의 날",
             "date": "2024-04-09"
         }
     },
@@ -821,7 +824,7 @@
         "model": "movies.Anniv",
         "pk": 101,
         "fields": {
-            "name": "",
+            "name": "세계 옷핀의 날",
             "date": "2024-04-10"
         }
     },
@@ -845,7 +848,7 @@
         "model": "movies.Anniv",
         "pk": 104,
         "fields": {
-            "name": "",
+            "name": "토마스 제퍼슨의 날",
             "date": "2024-04-13"
         }
     },
@@ -877,7 +880,7 @@
         "model": "movies.Anniv",
         "pk": 108,
         "fields": {
-            "name": "",
+            "name": "치즈볼의 날",
             "date": "2024-04-17"
         }
     },
@@ -885,7 +888,7 @@
         "model": "movies.Anniv",
         "pk": 109,
         "fields": {
-            "name": "",
+            "name": "국제 유적지 및 유적물의 날",
             "date": "2024-04-18"
         }
     },
@@ -960,7 +963,7 @@
         "model": "movies.Anniv",
         "pk": 118,
         "fields": {
-            "name": "",
+            "name": "구미 베어의 날",
             "date": "2024-04-27"
         }
     },
@@ -1088,7 +1091,7 @@
         "model": "movies.Anniv",
         "pk": 134,
         "fields": {
-            "name": "",
+            "name": "개구리 뛰기의 날",
             "date": "2024-05-13"
         }
     },
@@ -1180,7 +1183,7 @@
         "model": "movies.Anniv",
         "pk": 145,
         "fields": {
-            "name": "",
+            "name": "세계 조현병의 날",
             "date": "2024-05-24"
         }
     },
@@ -1196,7 +1199,7 @@
         "model": "movies.Anniv",
         "pk": 147,
         "fields": {
-            "name": "",
+            "name": "드라큘라의 날",
             "date": "2024-05-26"
         }
     },
@@ -1204,7 +1207,7 @@
         "model": "movies.Anniv",
         "pk": 148,
         "fields": {
-            "name": "",
+            "name": "셀로판 테이프의 날",
             "date": "2024-05-27"
         }
     },
@@ -1228,7 +1231,7 @@
         "model": "movies.Anniv",
         "pk": 151,
         "fields": {
-            "name": "",
+            "name": "꽃에 물주는 날",
             "date": "2024-05-30"
         }
     },
@@ -1295,7 +1298,7 @@
         "model": "movies.Anniv",
         "pk": 159,
         "fields": {
-            "name": "",
+            "name": "세계 음식 안전의 날",
             "date": "2024-06-07"
         }
     },
@@ -1327,7 +1330,7 @@
         "model": "movies.Anniv",
         "pk": 163,
         "fields": {
-            "name": "",
+            "name": "옥수수의 날",
             "date": "2024-06-11"
         }
     },
@@ -1343,7 +1346,7 @@
         "model": "movies.Anniv",
         "pk": 165,
         "fields": {
-            "name": "",
+            "name": "잡초 뽑는 날",
             "date": "2024-06-13"
         }
     },
@@ -1383,7 +1386,7 @@
         "model": "movies.Anniv",
         "pk": 170,
         "fields": {
-            "name": "",
+            "name": "세계 스시의 날",
             "date": "2024-06-18"
         }
     },
@@ -1391,7 +1394,7 @@
         "model": "movies.Anniv",
         "pk": 171,
         "fields": {
-            "name": "",
+            "name": "산책의 날",
             "date": "2024-06-19"
         }
     },
@@ -1418,7 +1421,7 @@
         "model": "movies.Anniv",
         "pk": 174,
         "fields": {
-            "name": "",
+            "name": "세계 열대우림의 날",
             "date": "2024-06-22"
         }
     },
@@ -1437,7 +1440,7 @@
         "model": "movies.Anniv",
         "pk": 176,
         "fields": {
-            "name": "",
+            "name": "점심시간을 적절히 활용하는 날",
             "date": "2024-06-24"
         }
     },
@@ -1467,7 +1470,7 @@
         "model": "movies.Anniv",
         "pk": 179,
         "fields": {
-            "name": "",
+            "name": "양파의 날",
             "date": "2024-06-27"
         }
     },
@@ -1483,7 +1486,7 @@
         "model": "movies.Anniv",
         "pk": 181,
         "fields": {
-            "name": "",
+            "name": "와플팬의 날",
             "date": "2024-06-29"
         }
     },
@@ -1523,7 +1526,7 @@
         "model": "movies.Anniv",
         "pk": 186,
         "fields": {
-            "name": "",
+            "name": "이상한 나라의 앨리스의 날",
             "date": "2024-07-04"
         }
     },
@@ -1531,7 +1534,7 @@
         "model": "movies.Anniv",
         "pk": 187,
         "fields": {
-            "name": "",
+            "name": "비키니의 날",
             "date": "2024-07-05"
         }
     },
@@ -1547,7 +1550,7 @@
         "model": "movies.Anniv",
         "pk": 189,
         "fields": {
-            "name": "",
+            "name": "세계 용서의 날",
             "date": "2024-07-07"
         }
     },
@@ -1563,7 +1566,7 @@
         "model": "movies.Anniv",
         "pk": 191,
         "fields": {
-            "name": "",
+            "name": "보조개의 날",
             "date": "2024-07-09"
         }
     },
@@ -1571,7 +1574,7 @@
         "model": "movies.Anniv",
         "pk": 192,
         "fields": {
-            "name": "",
+            "name": "새끼 고양이의 날",
             "date": "2024-07-10"
         }
     },
@@ -1595,7 +1598,7 @@
         "model": "movies.Anniv",
         "pk": 195,
         "fields": {
-            "name": "",
+            "name": "바버샵 음악 기념일",
             "date": "2024-07-13"
         }
     },
@@ -1603,7 +1606,7 @@
         "model": "movies.Anniv",
         "pk": 196,
         "fields": {
-            "name": "",
+            "name": "바스티유의 날",
             "date": "2024-07-14"
         }
     },
@@ -1611,7 +1614,7 @@
         "model": "movies.Anniv",
         "pk": 197,
         "fields": {
-            "name": "",
+            "name": "세계 청년 기술의 날",
             "date": "2024-07-15"
         }
     },
@@ -1619,7 +1622,7 @@
         "model": "movies.Anniv",
         "pk": 198,
         "fields": {
-            "name": "",
+            "name": "세계 뱀의 날",
             "date": "2024-07-16"
         }
     },
@@ -1646,7 +1649,7 @@
         "model": "movies.Anniv",
         "pk": 201,
         "fields": {
-            "name": "",
+            "name": "세계 교정 유지장치의 날",
             "date": "2024-07-19"
         }
     },
@@ -1654,7 +1657,7 @@
         "model": "movies.Anniv",
         "pk": 202,
         "fields": {
-            "name": "",
+            "name": "포춘 쿠키의 날",
             "date": "2024-07-20"
         }
     },
@@ -1662,7 +1665,7 @@
         "model": "movies.Anniv",
         "pk": 203,
         "fields": {
-            "name": "",
+            "name": "다른사람에게 도움을 주는 날",
             "date": "2024-07-21"
         }
     },
@@ -1670,7 +1673,7 @@
         "model": "movies.Anniv",
         "pk": 204,
         "fields": {
-            "name": "",
+            "name": "해먹의 날",
             "date": "2024-07-22"
         }
     },
@@ -1678,7 +1681,7 @@
         "model": "movies.Anniv",
         "pk": 205,
         "fields": {
-            "name": "",
+            "name": "바닐라 아이스크림의 날",
             "date": "2024-07-23"
         }
     },
@@ -1686,7 +1689,7 @@
         "model": "movies.Anniv",
         "pk": 206,
         "fields": {
-            "name": "",
+            "name": "사촌의 날",
             "date": "2024-07-24"
         }
     },
@@ -1694,7 +1697,7 @@
         "model": "movies.Anniv",
         "pk": 207,
         "fields": {
-            "name": "",
+            "name": "회전목마의 날",
             "date": "2024-07-25"
         }
     },
@@ -1702,7 +1705,7 @@
         "model": "movies.Anniv",
         "pk": 208,
         "fields": {
-            "name": "",
+            "name": "이모, 삼촌의 날",
             "date": "2024-07-26"
         }
     },
@@ -1710,7 +1713,7 @@
         "model": "movies.Anniv",
         "pk": 209,
         "fields": {
-            "name": "",
+            "name": "크림 브륄레의 날",
             "date": "2024-07-27"
         }
     },
@@ -1718,7 +1721,7 @@
         "model": "movies.Anniv",
         "pk": 210,
         "fields": {
-            "name": "",
+            "name": "워터파크의 날",
             "date": "2024-07-28"
         }
     },
@@ -1750,7 +1753,7 @@
         "model": "movies.Anniv",
         "pk": 214,
         "fields": {
-            "name": "",
+            "name": "세계 마작의 날",
             "date": "2024-08-01"
         }
     },
@@ -1758,7 +1761,7 @@
         "model": "movies.Anniv",
         "pk": 215,
         "fields": {
-            "name": "",
+            "name": "아이스크림 샌드의 날",
             "date": "2024-08-02"
         }
     },
@@ -1766,7 +1769,7 @@
         "model": "movies.Anniv",
         "pk": 216,
         "fields": {
-            "name": "",
+            "name": "견과류 한 줌 먹는 날",
             "date": "2024-08-03"
         }
     },
@@ -1774,7 +1777,7 @@
         "model": "movies.Anniv",
         "pk": 217,
         "fields": {
-            "name": "",
+            "name": "세계 구름표범의 날",
             "date": "2024-08-04"
         }
     },
@@ -1782,7 +1785,7 @@
         "model": "movies.Anniv",
         "pk": 218,
         "fields": {
-            "name": "",
+            "name": "개처럼 일하는 날",
             "date": "2024-08-05"
         }
     },
@@ -1790,7 +1793,7 @@
         "model": "movies.Anniv",
         "pk": 219,
         "fields": {
-            "name": "",
+            "name": "발가락 자유의 날",
             "date": "2024-08-06"
         }
     },
@@ -1798,7 +1801,7 @@
         "model": "movies.Anniv",
         "pk": 220,
         "fields": {
-            "name": "",
+            "name": "등대의 날",
             "date": "2024-08-07"
         }
     },
@@ -1806,10 +1809,7 @@
         "model": "movies.Anniv",
         "pk": 221,
         "fields": {
-            "name": [
-                "세계 요들의 날",
-                "세계 고양이의 날"
-            ],
+            "name": "세계 요들의 날",
             "date": "2024-08-08"
         }
     },
@@ -1825,7 +1825,7 @@
         "model": "movies.Anniv",
         "pk": 223,
         "fields": {
-            "name": "",
+            "name": "게으름의 날",
             "date": "2024-08-10"
         }
     },
@@ -1833,7 +1833,7 @@
         "model": "movies.Anniv",
         "pk": 224,
         "fields": {
-            "name": "",
+            "name": "키네틱 샌드의 날",
             "date": "2024-08-11"
         }
     },
@@ -1873,7 +1873,7 @@
         "model": "movies.Anniv",
         "pk": 229,
         "fields": {
-            "name": "",
+            "name": "유머의 날",
             "date": "2024-08-16"
         }
     },
@@ -1881,7 +1881,7 @@
         "model": "movies.Anniv",
         "pk": 230,
         "fields": {
-            "name": "",
+            "name": "비영리 행동의 날",
             "date": "2024-08-17"
         }
     },
@@ -1889,7 +1889,7 @@
         "model": "movies.Anniv",
         "pk": 231,
         "fields": {
-            "name": "",
+            "name": "피노 누아의 날",
             "date": "2024-08-18"
         }
     },
@@ -1905,7 +1905,7 @@
         "model": "movies.Anniv",
         "pk": 233,
         "fields": {
-            "name": "",
+            "name": "세계 모기의 날",
             "date": "2024-08-20"
         }
     },
@@ -1913,7 +1913,7 @@
         "model": "movies.Anniv",
         "pk": 234,
         "fields": {
-            "name": "",
+            "name": "노인의 날",
             "date": "2024-08-21"
         }
     },
@@ -1921,7 +1921,7 @@
         "model": "movies.Anniv",
         "pk": 235,
         "fields": {
-            "name": "",
+            "name": "젖니의 날",
             "date": "2024-08-22"
         }
     },
@@ -1937,7 +1937,7 @@
         "model": "movies.Anniv",
         "pk": 237,
         "fields": {
-            "name": "",
+            "name": "형제의 날",
             "date": "2024-08-24"
         }
     },
@@ -1945,7 +1945,7 @@
         "model": "movies.Anniv",
         "pk": 238,
         "fields": {
-            "name": "",
+            "name": "중고 의류의 날",
             "date": "2024-08-25"
         }
     },
@@ -1961,7 +1961,7 @@
         "model": "movies.Anniv",
         "pk": 240,
         "fields": {
-            "name": "",
+            "name": "가위바위보의 날",
             "date": "2024-08-27"
         }
     },
@@ -1969,7 +1969,7 @@
         "model": "movies.Anniv",
         "pk": 241,
         "fields": {
-            "name": "",
+            "name": "나비 넥타이의 날",
             "date": "2024-08-28"
         }
     },
@@ -1985,7 +1985,7 @@
         "model": "movies.Anniv",
         "pk": 243,
         "fields": {
-            "name": "",
+            "name": "해변의 날",
             "date": "2024-08-30"
         }
     },
@@ -1993,7 +1993,7 @@
         "model": "movies.Anniv",
         "pk": 244,
         "fields": {
-            "name": "",
+            "name": "외식의 날",
             "date": "2024-08-31"
         }
     },
@@ -2009,7 +2009,7 @@
         "model": "movies.Anniv",
         "pk": 246,
         "fields": {
-            "name": "",
+            "name": "세계 코코넛의 날",
             "date": "2024-09-02"
         }
     },
@@ -2017,7 +2017,7 @@
         "model": "movies.Anniv",
         "pk": 247,
         "fields": {
-            "name": "",
+            "name": "마천루의 날",
             "date": "2024-09-03"
         }
     },
@@ -2033,7 +2033,7 @@
         "model": "movies.Anniv",
         "pk": 249,
         "fields": {
-            "name": "",
+            "name": "세계 자선의 날",
             "date": "2024-09-05"
         }
     },
@@ -2041,7 +2041,7 @@
         "model": "movies.Anniv",
         "pk": 250,
         "fields": {
-            "name": "",
+            "name": "커피 아이스크림의 날",
             "date": "2024-09-06"
         }
     },
@@ -2068,7 +2068,7 @@
         "model": "movies.Anniv",
         "pk": 253,
         "fields": {
-            "name": "",
+            "name": "세계 스도쿠의 날",
             "date": "2024-09-09"
         }
     },
@@ -2084,7 +2084,7 @@
         "model": "movies.Anniv",
         "pk": 255,
         "fields": {
-            "name": "",
+            "name": "9.11 테러 추모일",
             "date": "2024-09-11"
         }
     },
@@ -2092,7 +2092,7 @@
         "model": "movies.Anniv",
         "pk": 256,
         "fields": {
-            "name": "",
+            "name": "UN 남남 협력의 날",
             "date": "2024-09-12"
         }
     },
@@ -2108,7 +2108,7 @@
         "model": "movies.Anniv",
         "pk": 258,
         "fields": {
-            "name": "",
+            "name": "창의적으로 사는 날",
             "date": "2024-09-14"
         }
     },
@@ -2132,7 +2132,7 @@
         "model": "movies.Anniv",
         "pk": 261,
         "fields": {
-            "name": "",
+            "name": "몬테크리스토 샌드위치의 날",
             "date": "2024-09-17"
         }
     },
@@ -2140,7 +2140,7 @@
         "model": "movies.Anniv",
         "pk": 262,
         "fields": {
-            "name": "",
+            "name": "세계 대나무의 날",
             "date": "2024-09-18"
         }
     },
@@ -2156,7 +2156,7 @@
         "model": "movies.Anniv",
         "pk": 264,
         "fields": {
-            "name": "",
+            "name": "스트링 치즈의 날",
             "date": "2024-09-20"
         }
     },
@@ -2180,7 +2180,7 @@
         "model": "movies.Anniv",
         "pk": 267,
         "fields": {
-            "name": "",
+            "name": "양성애 가시화의 날",
             "date": "2024-09-23"
         }
     },
@@ -2188,7 +2188,7 @@
         "model": "movies.Anniv",
         "pk": 268,
         "fields": {
-            "name": "",
+            "name": "구두점의 날",
             "date": "2024-09-24"
         }
     },
@@ -2196,7 +2196,7 @@
         "model": "movies.Anniv",
         "pk": 269,
         "fields": {
-            "name": "",
+            "name": "수학 스토리텔링의 날",
             "date": "2024-09-25"
         }
     },
@@ -2204,7 +2204,7 @@
         "model": "movies.Anniv",
         "pk": 270,
         "fields": {
-            "name": "",
+            "name": "만두의 날",
             "date": "2024-09-26"
         }
     },
@@ -2239,7 +2239,7 @@
         "model": "movies.Anniv",
         "pk": 274,
         "fields": {
-            "name": "",
+            "name": "머드팩의 날",
             "date": "2024-09-30"
         }
     },
@@ -2259,10 +2259,7 @@
         "model": "movies.Anniv",
         "pk": 276,
         "fields": {
-            "name": [
-                "노인의 날",
-                "국제 비폭력의 날"
-            ],
+            "name": "국제 비폭력의 날",
             "date": "2024-10-02"
         }
     },
@@ -2300,7 +2297,7 @@
         "model": "movies.Anniv",
         "pk": 280,
         "fields": {
-            "name": "",
+            "name": "면 요리의 날",
             "date": "2024-10-06"
         }
     },
@@ -2308,7 +2305,7 @@
         "model": "movies.Anniv",
         "pk": 281,
         "fields": {
-            "name": "",
+            "name": "프라페의 날",
             "date": "2024-10-07"
         }
     },
@@ -2354,7 +2351,7 @@
         "model": "movies.Anniv",
         "pk": 286,
         "fields": {
-            "name": "",
+            "name": "세계 관절염의 날",
             "date": "2024-10-12"
         }
     },
@@ -2370,7 +2367,7 @@
         "model": "movies.Anniv",
         "pk": 288,
         "fields": {
-            "name": "",
+            "name": "세계 표준화의 날",
             "date": "2024-10-14"
         }
     },
@@ -2416,7 +2413,7 @@
         "model": "movies.Anniv",
         "pk": 293,
         "fields": {
-            "name": "",
+            "name": "세계 진토닉의 날",
             "date": "2024-10-19"
         }
     },
@@ -2424,7 +2421,7 @@
         "model": "movies.Anniv",
         "pk": 294,
         "fields": {
-            "name": "",
+            "name": "항공교통관제사의 날",
             "date": "2024-10-20"
         }
     },
@@ -2440,7 +2437,7 @@
         "model": "movies.Anniv",
         "pk": 296,
         "fields": {
-            "name": "",
+            "name": "Caps Lock의 날",
             "date": "2024-10-22"
         }
     },
@@ -2448,7 +2445,7 @@
         "model": "movies.Anniv",
         "pk": 297,
         "fields": {
-            "name": "",
+            "name": "아이팟의 날",
             "date": "2024-10-23"
         }
     },
@@ -2475,7 +2472,7 @@
         "model": "movies.Anniv",
         "pk": 300,
         "fields": {
-            "name": "",
+            "name": "노새의 날",
             "date": "2024-10-26"
         }
     },
@@ -2483,7 +2480,7 @@
         "model": "movies.Anniv",
         "pk": 301,
         "fields": {
-            "name": "",
+            "name": "검은 고양이의 날",
             "date": "2024-10-27"
         }
     },
@@ -2507,7 +2504,7 @@
         "model": "movies.Anniv",
         "pk": 304,
         "fields": {
-            "name": "",
+            "name": "출판인의 날",
             "date": "2024-10-30"
         }
     },
@@ -2550,7 +2547,7 @@
         "model": "movies.Anniv",
         "pk": 309,
         "fields": {
-            "name": "",
+            "name": "페퍼로니 피자의 날",
             "date": "2024-11-04"
         }
     },
@@ -2574,7 +2571,7 @@
         "model": "movies.Anniv",
         "pk": 312,
         "fields": {
-            "name": "",
+            "name": "러시아 혁명 기념일",
             "date": "2024-11-07"
         }
     },
@@ -2582,7 +2579,7 @@
         "model": "movies.Anniv",
         "pk": 313,
         "fields": {
-            "name": "",
+            "name": "세계 도시계획의 날",
             "date": "2024-11-08"
         }
     },
@@ -2614,7 +2611,7 @@
         "model": "movies.Anniv",
         "pk": 317,
         "fields": {
-            "name": "",
+            "name": "세계 폐렴의 날",
             "date": "2024-11-12"
         }
     },
@@ -2638,7 +2635,7 @@
         "model": "movies.Anniv",
         "pk": 320,
         "fields": {
-            "name": "",
+            "name": "시치고산",
             "date": "2024-11-15"
         }
     },
@@ -2665,7 +2662,7 @@
         "model": "movies.Anniv",
         "pk": 323,
         "fields": {
-            "name": "",
+            "name": "공주의 날",
             "date": "2024-11-18"
         }
     },
@@ -2673,7 +2670,7 @@
         "model": "movies.Anniv",
         "pk": 324,
         "fields": {
-            "name": "",
+            "name": "화장실의 날",
             "date": "2024-11-19"
         }
     },
@@ -2681,7 +2678,7 @@
         "model": "movies.Anniv",
         "pk": 325,
         "fields": {
-            "name": "",
+            "name": "트렌스젠더 추모의 날",
             "date": "2024-11-20"
         }
     },
@@ -2705,7 +2702,7 @@
         "model": "movies.Anniv",
         "pk": 328,
         "fields": {
-            "name": "",
+            "name": "피보나치의 날",
             "date": "2024-11-23"
         }
     },
@@ -2713,7 +2710,7 @@
         "model": "movies.Anniv",
         "pk": 329,
         "fields": {
-            "name": "",
+            "name": "정어리의 날",
             "date": "2024-11-24"
         }
     },
@@ -2721,7 +2718,7 @@
         "model": "movies.Anniv",
         "pk": 330,
         "fields": {
-            "name": "",
+            "name": "아빠와 노는 날",
             "date": "2024-11-25"
         }
     },
@@ -2729,7 +2726,7 @@
         "model": "movies.Anniv",
         "pk": 331,
         "fields": {
-            "name": "",
+            "name": "국제 케이크의 날",
             "date": "2024-11-26"
         }
     },
@@ -2737,7 +2734,7 @@
         "model": "movies.Anniv",
         "pk": 332,
         "fields": {
-            "name": "",
+            "name": "육포의 날",
             "date": "2024-11-27"
         }
     },
@@ -2745,7 +2742,7 @@
         "model": "movies.Anniv",
         "pk": 333,
         "fields": {
-            "name": "",
+            "name": "화성의 날",
             "date": "2024-11-28"
         }
     },
@@ -2753,7 +2750,7 @@
         "model": "movies.Anniv",
         "pk": 334,
         "fields": {
-            "name": "",
+            "name": "온라인으로 인사를 전하는 날",
             "date": "2024-11-29"
         }
     },
@@ -2761,7 +2758,7 @@
         "model": "movies.Anniv",
         "pk": 335,
         "fields": {
-            "name": "",
+            "name": "컴퓨터 보안의 날",
             "date": "2024-11-30"
         }
     },
@@ -2777,7 +2774,7 @@
         "model": "movies.Anniv",
         "pk": 337,
         "fields": {
-            "name": "",
+            "name": "잡종개의 날",
             "date": "2024-12-02"
         }
     },
@@ -2793,7 +2790,7 @@
         "model": "movies.Anniv",
         "pk": 339,
         "fields": {
-            "name": "",
+            "name": "산타 할아버지가 배송 목록 작성하는 날",
             "date": "2024-12-04"
         }
     },
@@ -2812,7 +2809,7 @@
         "model": "movies.Anniv",
         "pk": 341,
         "fields": {
-            "name": "",
+            "name": "가스파초의 날",
             "date": "2024-12-06"
         }
     },
@@ -2828,7 +2825,7 @@
         "model": "movies.Anniv",
         "pk": 343,
         "fields": {
-            "name": "",
+            "name": "가로세로 낱말 퀴즈의 날",
             "date": "2024-12-08"
         }
     },
@@ -2860,7 +2857,7 @@
         "model": "movies.Anniv",
         "pk": 347,
         "fields": {
-            "name": "",
+            "name": "포인세티아의 날",
             "date": "2024-12-12"
         }
     },
@@ -2868,7 +2865,7 @@
         "model": "movies.Anniv",
         "pk": 348,
         "fields": {
-            "name": "",
+            "name": "바이올린의 날",
             "date": "2024-12-13"
         }
     },
@@ -2876,7 +2873,7 @@
         "model": "movies.Anniv",
         "pk": 349,
         "fields": {
-            "name": "",
+            "name": "허그데이",
             "date": "2024-12-14"
         }
     },
@@ -2884,7 +2881,7 @@
         "model": "movies.Anniv",
         "pk": 350,
         "fields": {
-            "name": "",
+            "name": "진주 장신구를 착용하는 날",
             "date": "2024-12-15"
         }
     },
@@ -2892,7 +2889,7 @@
         "model": "movies.Anniv",
         "pk": 351,
         "fields": {
-            "name": "",
+            "name": "초콜릿 코팅된 모든 것의 날",
             "date": "2024-12-16"
         }
     },
@@ -2900,7 +2897,7 @@
         "model": "movies.Anniv",
         "pk": 352,
         "fields": {
-            "name": "",
+            "name": "메이플 시럽의 날",
             "date": "2024-12-17"
         }
     },
@@ -2916,7 +2913,7 @@
         "model": "movies.Anniv",
         "pk": 354,
         "fields": {
-            "name": "",
+            "name": "사탕의 날",
             "date": "2024-12-19"
         }
     },
@@ -2948,7 +2945,7 @@
         "model": "movies.Anniv",
         "pk": 358,
         "fields": {
-            "name": "",
+            "name": "가족 계보의 날",
             "date": "2024-12-23"
         }
     },
@@ -2956,7 +2953,7 @@
         "model": "movies.Anniv",
         "pk": 359,
         "fields": {
-            "name": "",
+            "name": "크리스마스 이브",
             "date": "2024-12-24"
         }
     },
@@ -2988,7 +2985,7 @@
         "model": "movies.Anniv",
         "pk": 363,
         "fields": {
-            "name": "",
+            "name": "단편 영화의 날",
             "date": "2024-12-28"
         }
     },
@@ -2996,7 +2993,7 @@
         "model": "movies.Anniv",
         "pk": 364,
         "fields": {
-            "name": "",
+            "name": "한 해 못 이룬 일들을 마무리하는 날",
             "date": "2024-12-29"
         }
     },
@@ -3004,7 +3001,7 @@
         "model": "movies.Anniv",
         "pk": 365,
         "fields": {
-            "name": "",
+            "name": "베이컨의 날",
             "date": "2024-12-30"
         }
     },
