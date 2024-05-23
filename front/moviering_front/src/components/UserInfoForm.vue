@@ -149,7 +149,6 @@ console.log(store.user.id)
 console.log('here')
 
 const formData  = ref({
-  // user_id: ,
   isSpecial: undefined,
   gender: '',
   era: '',

@@ -3,55 +3,57 @@
     <h2 v-if="store.user" style="color: pink;">{{ store.user.username }}님의 영화 취향</h2>
 
     
-    
     <div class="form_box" style="display: flex; justify-content: center; align-items: center;">
-      <span class="bracket_large">[</span>
-      <div class="ifUserInfo">
-        <div v-for="info in userInfo">
-          <p v-if="info.isSpecial === true" class="info_item">
-            기념일 관련 영화를 추천받고 싶어요
-          </p>
-          <p v-if="info.isSpecial === false" class="info_item">
-            기념일 관련 영화를 추천받고 싶지 않아요
-          </p>
-  
-          <p v-if="info.gender === 'male'" class="info_item">
-            남성
-          </p>
-          <p v-else class="info_item">
-            여성
-          </p>
-  
-          <p>
-            <span v-for="era in era_list">
-              <span v-if="era.eng === info.era" class="info_item">
-                {{ era.kor }}
-              </span>
-            </span>
-          </p>
-          
-          <p class="info_item">
-            <span v-for="genre_pk in info.favorite_genre">
-              <span v-for="genre in data">
-                <span v-if="genre_pk === genre.pk" style="margin: 5px;">
-                  {{ genre.fields.name }}
+        <div v-for="info in userInfo" class="info_box">
+
+          <span class="bracket_large">[</span>
+
+          <div>
+            <p v-if="info.isSpecial === true" class="info_item">
+              기념일 관련 영화를 추천받고 싶어요
+            </p>
+            <p v-if="info.isSpecial === false" class="info_item">
+              기념일 관련 영화를 추천받고 싶지 않아요
+            </p>
+    
+            <p v-if="info.gender === 'male'" class="info_item">
+              남성
+            </p>
+            <p v-else class="info_item">
+              여성
+            </p>
+    
+            <p>
+              <span v-for="era in era_list">
+                <span v-if="era.eng === info.era" class="info_item">
+                  {{ era.kor }}
                 </span>
               </span>
-            </span>
-          </p>
-          
-          <p class="info_item">
-            {{ info.viewing_environment }}
-          </p>
-  
-          <p class="info_item">
-            {{ info.birthday }}
-          </p>
-      </div>
-          
+            </p>
+            
+            <p class="info_item">
+              <span v-for="genre_pk in info.favorite_genre">
+                <span v-for="genre in data">
+                  <span v-if="genre_pk === genre.pk" style="margin: 5px;">
+                    {{ genre.fields.name }}
+                  </span>
+                </span>
+              </span>
+            </p>
+            
+            <p class="info_item">
+              {{ info.viewing_environment }}
+            </p>
+    
+            <p class="info_item">
+              {{ info.birthday }}
+            </p>
         </div>
+      </div>
+
         <span class="bracket_large">]</span>
       </div>
+          
 
       <p style="margin-bottom: 70px;">
         <RouterLink
@@ -117,7 +119,7 @@
     })
   };
 
-  if (userInfo.length === 0){
+  if (userInfo.length !== 0){
     onMounted(() => {
       getUserInfo()
     });
@@ -129,6 +131,10 @@
   .form_box{
     margin: 0;
     height: 400px;
+  }
+  .info_box{
+    display:flex;
+    align-items: center;
   }
   .info_item{
     display: flex;
