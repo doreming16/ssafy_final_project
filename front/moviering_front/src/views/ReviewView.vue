@@ -19,45 +19,53 @@
     </form>
 </div>
 
+<div>
+  <div
+    v-for="review in reviews"
+    :key="review.id"
+    :review="review"
+  >
+    {{ review.rating }}
+    {{ review.content }}
+    <br>
+  </div>
+</div>
+
 </template>
   
 <script setup>
-import { onMounted, ref, defineProps } from 'vue'
-import { useCounterStore } from '@/stores/counter'
-import { useRouter } from 'vue-router'
 import axios from 'axios'
 
+import { onMounted, ref, defineProps } from 'vue'
+import { useRouter } from 'vue-router'
+import { useCounterStore } from '@/stores/counter'
+
 const store = useCounterStore()
-// const rating = ref(null)
-// const content = ref(null)
+const rating = ref(null)
+const content = ref(null)
 const router = useRouter()
 
-const formData = ref({
-  movie: null,
-  user: null,
-  rating: null,
-  content: null,
-  created_at: null,
-  updated_at: null
-})
-
-// Read
-// onMounted(() => {
-//     store.getReviews()
-// })
-
 const props = defineProps({
-  Id: Number
+  id: Number
 })
-console.log(props)
+const userId = ref(store.getuserId)
+// Read
+onMounted(() => {
+    store.getReviews(props.id)
+})
+const reviews = ref(store.reviews)
+console.log(reviews)
+
 const createReview = function () {
   axios({
     method: 'post',
-    url: `${store.API_URL}/detail/${props.Id}/reviews/`,
-    data: formData.value,
+    url: `${store.API_URL}/movies/detail/${props.id}/reviews/`,
+    data: {
+      rating: rating.value,
+      content: content.value
+    },
     headers: {
       Authorization: `Token ${store.token}`,
-      'Content-Type': 'application/json'
     }
   })
     .then((response) => {

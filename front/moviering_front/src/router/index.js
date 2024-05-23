@@ -52,12 +52,14 @@ const router = createRouter({
       path: "/movies/detail/:id",
       name: "movie_detail_page",
       component: MovieDetailPage,
+      children: [
+        { 
+          path: "/reviews",
+          name: "ReviewView",
+          component: ReviewView,
+        }
+      ]
     },
-    { 
-      path: "/movies/detail/:id/reviews",
-      name: "ReviewView",
-      component: ReviewView,
-    }
   ],
 });
 

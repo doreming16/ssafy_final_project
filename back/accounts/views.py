@@ -1,6 +1,8 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_list_or_404
 from rest_framework.decorators import authentication_classes
 from rest_framework.authentication import TokenAuthentication, BasicAuthentication
+
 
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
@@ -48,3 +50,8 @@ def get_userinfo_list(request):
         for info in userinfo  # List Comprehension
     ]
     return JsonResponse(data, safe=False)
+
+@login_required
+def get_user_id(request):
+    user_id = request.user.id
+    return JsonResponse({'userId': user_id})

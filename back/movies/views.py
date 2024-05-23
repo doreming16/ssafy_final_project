@@ -13,31 +13,30 @@ import json
 
 # Create your views here.
 @api_view(['GET', 'POST'])
-def review_list(request, movie_pk):
+def reviews(request, movie_pk):
+    movie = get_object_or_404(Movie, pk=movie_pk)
     if request.method == 'GET':
-        movie = Movie.objects.get(pk=movie_pk)
-        reviews = Review.objects.all(movie=movie)
+        reviews = Review.objects.filter(movie=movie)
         serializer = ReviewSerializer(reviews, many=True)
         return Response(serializer.data)
-
     elif request.method == 'POST':
-        # movie = Movie.objects.get(pk=movie_pk)
-        # serializer = ReviewSerializer(data=request.data)
-        # if serializer.is_valid(raise_exception=True):
-        #     serializer.save(movie=movie)
-        #     return Response(serializer.data, status=status.HTTP_201_CREATED)
-        data = json.loads(request.body)
-        form_data = Review(
-            movie=data.get('movie'),
-            user=data.get('user'),
-            rating=data.get('rating'),
-            content=data.get('content'),
-            created_at=data.get('created_at'),
-            updated_at=data.get('updated_at')
-        )
-        form_data.save()
-        return JsonResponse({'status': 'success'})
-    return JsonResponse({'status': 'fail'}, status=400)
+        serializer = ReviewSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(user=request.user, movie=movie)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    #     data = json.loads(request.body)
+    #     form_data = Review(
+    #         movie=data.get('movie'),
+    #         user=data.get('user'),
+    #         rating=data.get('rating'),
+    #         content=data.get('content'),
+    #         created_at=data.get('created_at'),
+    #         updated_at=data.get('updated_at')
+    #     )
+    #     form_data.save()
+    #     return JsonResponse({'status': 'success'})
+    # return JsonResponse({'status': 'fail'}, status=400)
 
 
 @api_view(['GET', 'POST', 'PUT', 'DELETE'])

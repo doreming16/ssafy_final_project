@@ -17,7 +17,7 @@
         </div>
       </div>
 
-      <ReviewView :id="parseInt($route.params.id)"/>
+      <ReviewView :id="moviePk"/>
     </div>
   </template>
   
@@ -36,6 +36,8 @@
       movie.value = datum.fields
     }
   }
+
+  const moviePk = ref(parseInt(route.params.id))
 </script>
   
   <style scoped>

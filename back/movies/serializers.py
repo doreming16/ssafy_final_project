@@ -5,11 +5,10 @@ class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
         fields = '__all__'
-        read_only_fields = ('movie',)
+        read_only_fields = ('movie', 'user')
 
 class MovieSerializer(serializers.ModelSerializer):
     review_set = ReviewSerializer(many=True, read_only=True)
-
     class Meta:
         model = Movie
         fields = '__all__'

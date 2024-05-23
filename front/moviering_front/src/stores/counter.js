@@ -3,6 +3,7 @@ import { defineStore } from "pinia";
 import axios from "axios";
 import { useRouter } from 'vue-router'
 
+
 export const useCounterStore = defineStore(
   "counter",
   () => {
@@ -17,10 +18,10 @@ export const useCounterStore = defineStore(
       })
     }
 
-    const getReviews = function () {
+    const getReviews = function (Id) {
       axios({
         method: 'get',
-        url: `${API_URL}/movies/:id/reviews/`
+        url: `${API_URL}/movies/detail/${Id}/reviews/`
       })
       .then(res => {
         // console.log(res)
@@ -30,6 +31,7 @@ export const useCounterStore = defineStore(
       .catch(err => console.log(err))
     }
 
+    
     
     // token 저장
     const token = ref(null);
@@ -61,6 +63,30 @@ export const useCounterStore = defineStore(
       });
     };
     
+    const userId = ref(null)
+
+    const fetchUserId = function () {
+      axios({
+        method: 'get',
+        url: `${API_URL}/accounts/get-user-id/`,
+        headers: {
+          Authorization: `Token ${token}`
+        }
+      })
+      .then((response) => {
+        userId.value = response.data.userId; // 사용자 ID를 저장
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+    }
+
+    fetchUserId()
+
+    const getUserId = computed(() => {
+      return userId.value
+    })
+
     const router = useRouter()  
     
     const logIn = function (payload) {
@@ -95,7 +121,7 @@ export const useCounterStore = defineStore(
         return true
       }
     })
-    return { API_URL, signUp, logIn, token, isLogin, getReviews };
+    return { API_URL, signUp, logIn, token, isLogin, getReviews, getUserId, reviews };
   },
   { persist: true }
 );
